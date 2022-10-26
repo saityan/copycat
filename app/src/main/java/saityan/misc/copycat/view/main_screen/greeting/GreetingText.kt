@@ -8,7 +8,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import saityan.misc.copycat.ui.theme.Typography
 
 @Composable
-fun Greeting(string: String) {
+fun GreetingText(string: String) {
     Surface(
         color = MaterialTheme.colorScheme.primary,
     ) {
@@ -22,5 +22,5 @@ fun Greeting(string: String) {
 @Preview(showBackground = false)
 @Composable
 fun GreetingPreview() {
-    Greeting(string = "Hi, Mike!")
+    GreetingText(string = "Hi, Mike!")
 }

@@ -2,20 +2,23 @@ package saityan.misc.copycat.view.main_screen.greeting
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 
 @Composable
-fun GreetingsRow(
+fun Greeting(
     name: String
 ) {
     Row (
         verticalAlignment = Alignment.Top,
     ) {
         Column(Modifier.weight(7f)) {
-            Greeting(string = "Hi, ${name}!")
+            GreetingText(string = "Hi, ${name}!")
         }
         Column(Modifier.weight(1f)) {
             SearchIcon()
@@ -32,5 +35,5 @@ fun GreetingsRow(
 @Preview(showBackground = false)
 @Composable
 fun GreetingRowPreview() {
-    GreetingsRow(name = "Mike")
+    Greeting(name = "Mike")
 }
