@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen.greeting_row
+package saityan.misc.copycat.view.main_screen.greeting
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width

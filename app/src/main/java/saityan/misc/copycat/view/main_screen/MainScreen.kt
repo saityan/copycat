@@ -11,13 +11,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import saityan.misc.copycat.view.main_screen.greeting_row.GreetingsRow
+import saityan.misc.copycat.view.main_screen.greeting.GreetingsRow
+import saityan.misc.copycat.view.main_screen.timer.Timer
 
 @Composable
 fun MainScreen() {
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
+        color = MaterialTheme.colorScheme.background,
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -27,11 +28,7 @@ fun MainScreen() {
 
             Spacer(Modifier.height(32.dp))
 
-            Row(
-                verticalAlignment = Alignment.Top,
-            ) {
-                Timer()
-            }
+            Timer()
 
             Spacer(Modifier.height(32.dp))
 
@@ -39,81 +36,6 @@ fun MainScreen() {
                 verticalAlignment = Alignment.Top,
             ) {
                 Classes()
-            }
-        }
-    }
-}
-
-
-@Composable
-fun Timer() {
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        Text(
-            text = "Are you ready for exams?",
-            color = MaterialTheme.colorScheme.onPrimary
-        )
-        Spacer(Modifier.height(16.dp))
-
-        Row (
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly,
-        ) {
-            Column(
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                Text(
-                    text = "10",
-                    color = MaterialTheme.colorScheme.onPrimary,
-                    fontSize = MaterialTheme.typography.headlineMedium.fontSize,
-                )
-                Spacer(Modifier.height(16.dp))
-
-                Text(
-                    text = "Days",
-                    color = MaterialTheme.colorScheme.onPrimary
-                )
-                Spacer(Modifier.height(16.dp))
-            }
-
-            Column(
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                Text(
-                    text = "00",
-                    color = MaterialTheme.colorScheme.onPrimary,
-                    fontSize = MaterialTheme.typography.headlineMedium.fontSize,
-                )
-                Spacer(Modifier.height(16.dp))
-
-                Text(
-                    text = "Hours",
-                    color = MaterialTheme.colorScheme.onPrimary
-                )
-                Spacer(Modifier.height(16.dp))
-            }
-
-            Column(
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                Text(
-                    text = "00",
-                    color = MaterialTheme.colorScheme.onPrimary,
-                    fontSize = MaterialTheme.typography.headlineMedium.fontSize,
-                )
-                Spacer(Modifier.height(16.dp))
-
-                Text(
-                    text = "Minutes",
-                    color = MaterialTheme.colorScheme.onPrimary
-                )
-                Spacer(Modifier.height(16.dp))
             }
         }
     }
