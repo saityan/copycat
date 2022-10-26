@@ -16,6 +16,7 @@ fun Lessons() {
     ) {
         LessonsHeader()
     }
+    Spacer(Modifier.height(32.dp))
 }
 
 @Preview(showBackground = false)

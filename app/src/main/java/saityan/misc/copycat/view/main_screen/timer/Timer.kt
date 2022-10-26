@@ -16,10 +16,12 @@ fun Timer() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             TimerHeader()
-
+            Spacer(Modifier.height(16.dp))
             TimerBody()
+
         }
     }
+    Spacer(Modifier.height(32.dp))
 }
 
 @Preview(showBackground = false)

@@ -23,13 +23,10 @@ fun MainScreen() {
             modifier = Modifier.fillMaxSize(),
         ) {
             Greeting(name = "Mike")
-            Spacer(Modifier.height(32.dp))
 
             Timer()
-            Spacer(Modifier.height(32.dp))
 
             Lessons()
-            Spacer(Modifier.height(32.dp))
         }
     }
 }
