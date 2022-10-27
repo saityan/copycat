@@ -11,33 +11,37 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun LessonsHeader() {
-    Column(
-        verticalArrangement = Arrangement.SpaceEvenly,
-        horizontalAlignment = Alignment.Start
+    Row(
+        modifier = Modifier.fillMaxSize()
     ) {
-        Row(
-            modifier = Modifier.fillMaxSize(),
-            horizontalArrangement = Arrangement.SpaceBetween,
+        Column(
+            verticalArrangement = Arrangement.SpaceEvenly,
+            horizontalAlignment = Alignment.Start
         ) {
-            Column(
-                horizontalAlignment = Alignment.Start
+            Row(
+                modifier = Modifier.fillMaxSize(),
+                horizontalArrangement = Arrangement.SpaceBetween,
             ) {
-                Text(
-                    text = "Classes",
-                    fontSize = MaterialTheme.typography.titleMedium.fontSize
-                )
-            }
-            Column(
-                horizontalAlignment = Alignment.End
-            ) {
-                Text(
-                    text = "6 classes today",
-                    fontSize = MaterialTheme.typography.titleSmall.fontSize,
-                )
+                Column(
+                    horizontalAlignment = Alignment.Start
+                ) {
+                    Text(
+                        text = "Classes",
+                        fontSize = MaterialTheme.typography.titleMedium.fontSize
+                    )
+                }
+                Column(
+                    horizontalAlignment = Alignment.End
+                ) {
+                    Text(
+                        text = "6 classes today",
+                        fontSize = MaterialTheme.typography.titleSmall.fontSize,
+                    )
+                }
             }
         }
-        Spacer(Modifier.height(16.dp))
     }
+    Spacer(Modifier.height(16.dp))
 }
 
 @Preview(showBackground = false)

@@ -18,7 +18,6 @@ fun Timer() {
             TimerHeader()
             Spacer(Modifier.height(16.dp))
             TimerBody()
-
         }
     }
     Spacer(Modifier.height(32.dp))
