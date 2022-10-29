@@ -15,10 +15,7 @@ fun TimerBody() {
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceEvenly,
     ) {
-        Column(
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = "10",
                 color = MaterialTheme.colorScheme.onPrimary,
@@ -33,10 +30,7 @@ fun TimerBody() {
             Spacer(Modifier.height(16.dp))
         }
 
-        Column(
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = "00",
                 color = MaterialTheme.colorScheme.onPrimary,
@@ -51,10 +45,7 @@ fun TimerBody() {
             Spacer(Modifier.height(16.dp))
         }
 
-        Column(
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = "00",
                 color = MaterialTheme.colorScheme.onPrimary,

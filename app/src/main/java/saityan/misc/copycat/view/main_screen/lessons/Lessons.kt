@@ -11,8 +11,10 @@ import androidx.compose.ui.unit.dp
 fun Lessons() {
     Row(verticalAlignment = Alignment.Top) {
         Column(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 6.dp),
+            verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             LessonsHeader()

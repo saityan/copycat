@@ -1,5 +1,6 @@
 package saityan.misc.copycat.view.main_screen.lessons
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
@@ -19,11 +20,10 @@ fun LessonIcon(
     icon: ImageVector = Icons.Default.Star,
     subjectName: String = "History"
 ) {
-    Surface(
+    Box(
         modifier = Modifier
             .height(32.dp)
             .width(32.dp),
-        color = MaterialTheme.colorScheme.primary,
     ) {
         IconButton(onClick = { /*Action*/ }) {
             Icon(

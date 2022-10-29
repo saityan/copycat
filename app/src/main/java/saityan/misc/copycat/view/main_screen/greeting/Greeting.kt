@@ -1,9 +1,6 @@
 package saityan.misc.copycat.view.main_screen.greeting
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -15,6 +12,7 @@ fun Greeting(
     name: String
 ) {
     Row (
+        modifier = Modifier.padding(6.dp),
         verticalAlignment = Alignment.Top,
     ) {
         Column(Modifier.weight(7f)) {
