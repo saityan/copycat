@@ -7,5 +7,6 @@ import androidx.compose.runtime.Composable
 fun LessonDesc() {
     Column {
         LessonName()
+        LessonTime()
     }
 }
