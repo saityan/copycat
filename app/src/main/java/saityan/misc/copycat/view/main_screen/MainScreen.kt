@@ -1,15 +1,13 @@
 package saityan.misc.copycat.view.main_screen
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.view.main_screen.greeting.Greeting
+import saityan.misc.copycat.view.main_screen.homework.Homework
 import saityan.misc.copycat.view.main_screen.lessons.Lessons
 import saityan.misc.copycat.view.main_screen.timer.Timer
 
@@ -27,6 +25,8 @@ fun MainScreen() {
             Timer()
 
             Lessons()
+
+            Homework()
         }
     }
 }
