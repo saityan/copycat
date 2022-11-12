@@ -19,7 +19,7 @@ fun Homework() {
         ) {
             HomeworkHeader()
 
-            HomeworkBody()
+            HomeworkList()
         }
     }
 }
