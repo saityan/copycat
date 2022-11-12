@@ -12,7 +12,7 @@ fun Homework() {
     Row(verticalAlignment = Alignment.Top) {
         Column(
             modifier = Modifier
-                .fillMaxHeight()
+                .fillMaxWidth()
                 .padding(horizontal = 6.dp),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.Start

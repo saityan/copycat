@@ -12,7 +12,7 @@ fun Lessons() {
     Row(verticalAlignment = Alignment.Top) {
         Column(
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxWidth()
                 .padding(horizontal = 6.dp),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
