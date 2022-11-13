@@ -6,6 +6,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import saityan.misc.copycat.view.main_screen.greeting.Greeting
 import saityan.misc.copycat.view.main_screen.homework.Homework
 import saityan.misc.copycat.view.main_screen.lessons.Lessons
@@ -29,4 +30,10 @@ fun MainScreen() {
             Homework()
         }
     }
+}
+
+@Preview(showBackground = false)
+@Composable
+fun MainScreenPreview() {
+    MainScreen()
 }

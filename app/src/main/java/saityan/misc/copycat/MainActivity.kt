@@ -18,7 +18,9 @@ class MainActivity : ComponentActivity() {
             HideBars()
 
             CopycatTheme {
+
                 MainScreen()
+
             }
         }
     }
@@ -30,10 +32,10 @@ fun HideBars() {
     systemUiController.isSystemBarsVisible = false
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = false)
 @Composable
 fun DefaultPreview() {
     CopycatTheme {
-
+        MainScreen()
     }
 }
