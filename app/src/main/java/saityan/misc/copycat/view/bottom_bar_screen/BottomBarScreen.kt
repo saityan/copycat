@@ -1,9 +1,7 @@
 package saityan.misc.copycat.view.bottom_bar_screen
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.*
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class BottomBarScreen(
@@ -20,18 +18,18 @@ sealed class BottomBarScreen(
     object Classes : BottomBarScreen(
         route = "classes",
         title = "Classes",
-        icon = Icons.Default.Settings
+        icon = Icons.Default.Info
     )
 
     object Subjects : BottomBarScreen(
         route = "subjects",
         title = "Subjects",
-        icon = Icons.Default.Person
+        icon = Icons.Default.List
     )
 
     object Favorite : BottomBarScreen(
         route = "favorite",
         title = "Favorite",
-        icon = Icons.Default.Settings
+        icon = Icons.Default.Favorite
     )
 }
