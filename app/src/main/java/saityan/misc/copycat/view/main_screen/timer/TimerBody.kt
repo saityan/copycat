@@ -1,8 +1,8 @@
 package saityan.misc.copycat.view.main_screen.timer
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -18,14 +18,14 @@ fun TimerBody() {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = "10",
-                color = MaterialTheme.colorScheme.onPrimary,
-                fontSize = MaterialTheme.typography.headlineMedium.fontSize,
+                color = MaterialTheme.colors.onPrimary,
+                fontSize = MaterialTheme.typography.h2.fontSize,
             )
             Spacer(Modifier.height(16.dp))
 
             Text(
                 text = "Days",
-                color = MaterialTheme.colorScheme.onPrimary
+                color = MaterialTheme.colors.onPrimary
             )
             Spacer(Modifier.height(16.dp))
         }
@@ -33,14 +33,14 @@ fun TimerBody() {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = "00",
-                color = MaterialTheme.colorScheme.onPrimary,
-                fontSize = MaterialTheme.typography.headlineMedium.fontSize,
+                color = MaterialTheme.colors.onPrimary,
+                fontSize = MaterialTheme.typography.h2.fontSize,
             )
             Spacer(Modifier.height(16.dp))
 
             Text(
                 text = "Hours",
-                color = MaterialTheme.colorScheme.onPrimary
+                color = MaterialTheme.colors.onPrimary
             )
             Spacer(Modifier.height(16.dp))
         }
@@ -48,14 +48,14 @@ fun TimerBody() {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = "00",
-                color = MaterialTheme.colorScheme.onPrimary,
-                fontSize = MaterialTheme.typography.headlineMedium.fontSize,
+                color = MaterialTheme.colors.onPrimary,
+                fontSize = MaterialTheme.typography.h2.fontSize,
             )
             Spacer(Modifier.height(16.dp))
 
             Text(
                 text = "Minutes",
-                color = MaterialTheme.colorScheme.onPrimary
+                color = MaterialTheme.colors.onPrimary
             )
             Spacer(Modifier.height(16.dp))
         }

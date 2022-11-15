@@ -1,9 +1,10 @@
 package saityan.misc.copycat.view.main_screen
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -16,10 +17,11 @@ import saityan.misc.copycat.view.main_screen.timer.Timer
 fun MainScreen() {
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background,
+        color = MaterialTheme.colors.background,
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.SpaceEvenly
         ) {
             Greeting(name = "Mike")
 

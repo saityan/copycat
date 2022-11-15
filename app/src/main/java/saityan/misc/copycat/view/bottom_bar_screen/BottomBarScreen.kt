@@ -1,35 +1,20 @@
 package saityan.misc.copycat.view.bottom_bar_screen
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.ui.graphics.vector.ImageVector
+import android.annotation.SuppressLint
+import androidx.compose.material.Scaffold
+import androidx.compose.runtime.Composable
+import androidx.navigation.compose.rememberNavController
 
-sealed class BottomBarScreen(
-    val route: String,
-    val title: String,
-    val icon: ImageVector
-) {
-    object Home : BottomBarScreen(
-        route = "home",
-        title = "Home",
-        icon = Icons.Default.Home
-    )
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
+@Composable
+fun BottomBarScreen() {
+    val navController = rememberNavController()
 
-    object Classes : BottomBarScreen(
-        route = "classes",
-        title = "Classes",
-        icon = Icons.Default.Info
-    )
-
-    object Subjects : BottomBarScreen(
-        route = "subjects",
-        title = "Subjects",
-        icon = Icons.Default.List
-    )
-
-    object Favorite : BottomBarScreen(
-        route = "favorite",
-        title = "Favorite",
-        icon = Icons.Default.Favorite
-    )
+    Scaffold(
+        bottomBar = {
+            BottomBar(navController = navController)
+        }
+    ) {
+        BottomBarNavGraph(navController = navController)
+    }
 }

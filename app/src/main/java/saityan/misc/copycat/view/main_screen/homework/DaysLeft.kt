@@ -1,6 +1,6 @@
 package saityan.misc.copycat.view.main_screen.homework
 
-import androidx.compose.material3.Text
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import saityan.misc.copycat.ui.theme.Typography
 
@@ -8,6 +8,6 @@ import saityan.misc.copycat.ui.theme.Typography
 fun DaysLeft(daysLeft: Int) {
     Text(
         text = "$daysLeft days left",
-        style = Typography.bodySmall
+        style = Typography.body1
     )
 }

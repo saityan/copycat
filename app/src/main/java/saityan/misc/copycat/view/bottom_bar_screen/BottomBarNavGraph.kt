@@ -9,9 +9,9 @@ import androidx.navigation.compose.composable
 fun BottomBarNavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
-        startDestination = BottomBarScreen.Home.route
+        startDestination = BottomBarScreenList.Home.route
     ) {
-        composable(route = BottomBarScreen.Home.route) {
+        composable(route = BottomBarScreenList.Home.route) {
             //TODO
         }
     }
