@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import saityan.misc.copycat.view.bottom_bar_screen.BottomBarScreen
 import saityan.misc.copycat.view.main_screen.greeting.Greeting
 import saityan.misc.copycat.view.main_screen.homework.Homework
 import saityan.misc.copycat.view.main_screen.lessons.Lessons
@@ -23,13 +24,24 @@ fun MainScreen() {
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.SpaceEvenly
         ) {
-            Greeting(name = "Mike")
+            Column(
+                verticalArrangement = Arrangement.SpaceEvenly,
+                modifier = Modifier.weight(9f)
+            ) {
+                Greeting(name = "Mike")
 
-            Timer()
+                Timer()
 
-            Lessons()
+                Lessons()
 
-            Homework()
+                Homework()
+            }
+            Column(
+                verticalArrangement = Arrangement.Bottom,
+                modifier = Modifier.weight(1f)
+            ) {
+                BottomBarScreen()
+            }
         }
     }
 }
