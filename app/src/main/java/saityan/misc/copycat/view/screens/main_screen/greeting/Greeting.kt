@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen.greeting
+package saityan.misc.copycat.view.screens.main_screen.greeting
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable

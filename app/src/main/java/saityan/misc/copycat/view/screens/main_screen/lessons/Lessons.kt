@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen.homework
+package saityan.misc.copycat.view.screens.main_screen.lessons
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
@@ -8,24 +8,25 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Homework() {
+fun Lessons() {
     Row(verticalAlignment = Alignment.Top) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 6.dp),
             verticalArrangement = Arrangement.Top,
-            horizontalAlignment = Alignment.Start
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            HomeworkHeader()
+            LessonsHeader()
 
-            HomeworkList()
+            LessonsBody()
         }
     }
+    Spacer(Modifier.height(32.dp))
 }
 
 @Preview(showBackground = false)
 @Composable
-fun HomeworkPreview() {
-    Homework()
+fun LessonsPreview() {
+    Lessons()
 }

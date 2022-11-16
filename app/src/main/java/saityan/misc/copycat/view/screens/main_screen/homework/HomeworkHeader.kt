@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen.homework
+package saityan.misc.copycat.view.screens.main_screen.homework
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth

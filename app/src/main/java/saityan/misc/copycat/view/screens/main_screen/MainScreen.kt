@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen
+package saityan.misc.copycat.view.screens.main_screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,10 +9,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import saityan.misc.copycat.view.bottom_bar_screen.BottomBarScreen
-import saityan.misc.copycat.view.main_screen.greeting.Greeting
-import saityan.misc.copycat.view.main_screen.homework.Homework
-import saityan.misc.copycat.view.main_screen.lessons.Lessons
-import saityan.misc.copycat.view.main_screen.timer.Timer
+import saityan.misc.copycat.view.screens.main_screen.greeting.Greeting
+import saityan.misc.copycat.view.screens.main_screen.homework.Homework
+import saityan.misc.copycat.view.screens.main_screen.lessons.Lessons
+import saityan.misc.copycat.view.screens.main_screen.timer.Timer
 
 @Composable
 fun MainScreen() {
@@ -40,7 +40,7 @@ fun MainScreen() {
                 verticalArrangement = Arrangement.Bottom,
                 modifier = Modifier.weight(1f)
             ) {
-                BottomBarScreen()
+
             }
         }
     }

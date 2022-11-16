@@ -8,7 +8,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.google.accompanist.systemuicontroller.SystemUiController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import saityan.misc.copycat.ui.theme.CopycatTheme
-import saityan.misc.copycat.view.main_screen.MainScreen
+import saityan.misc.copycat.view.bottom_bar_screen.BottomBarScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
 
             CopycatTheme {
 
-                MainScreen()
+                BottomBarScreen()
 
             }
         }
@@ -36,6 +36,6 @@ fun HideBars() {
 @Composable
 fun DefaultPreview() {
     CopycatTheme {
-        MainScreen()
+        BottomBarScreen()
     }
 }

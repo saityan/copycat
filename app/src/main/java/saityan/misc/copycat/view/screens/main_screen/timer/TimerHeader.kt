@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen.timer
+package saityan.misc.copycat.view.screens.main_screen.timer
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text

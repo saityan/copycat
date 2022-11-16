@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen.greeting
+package saityan.misc.copycat.view.screens.main_screen.greeting
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface

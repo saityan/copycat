@@ -1,30 +1,33 @@
-package saityan.misc.copycat.view.main_screen.greeting
+package saityan.misc.copycat.view.screens.main_screen.lessons
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ProfileIcon() {
-    Surface(
+fun LessonIcon(
+    icon: ImageVector = Icons.Default.Star,
+    subjectName: String = "History"
+) {
+    Box(
         modifier = Modifier
             .height(32.dp)
             .width(32.dp),
-        color = MaterialTheme.colors.primary,
     ) {
         IconButton(onClick = { /*Action*/ }) {
             Icon(
-                imageVector = Icons.Default.AccountCircle,
-                contentDescription = "Profile",
+                imageVector = icon,
+                contentDescription = subjectName,
                 tint = MaterialTheme.colors.onPrimary
             )
         }
@@ -33,6 +36,6 @@ fun ProfileIcon() {
 
 @Preview(showBackground = false)
 @Composable
-fun ProfileIconPreview() {
-    ProfileIcon()
+fun LessonIconPreview() {
+    LessonIcon()
 }

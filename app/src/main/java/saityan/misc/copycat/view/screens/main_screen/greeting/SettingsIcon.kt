@@ -1,9 +1,9 @@
-package saityan.misc.copycat.view.main_screen.greeting
+package saityan.misc.copycat.view.screens.main_screen.greeting
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SearchIcon() {
+fun SettingsIcon() {
     Surface(
         modifier = Modifier
             .height(32.dp)
@@ -22,8 +22,8 @@ fun SearchIcon() {
     ) {
         IconButton(onClick = { /*Action*/ }) {
             Icon(
-                imageVector = Icons.Default.Search,
-                contentDescription = "Search",
+                imageVector = Icons.Default.Settings,
+                contentDescription = "Settings",
                 tint = MaterialTheme.colors.onPrimary
             )
         }

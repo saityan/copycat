@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen.homework
+package saityan.misc.copycat.view.screens.main_screen.homework
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview

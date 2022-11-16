@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen.lessons
+package saityan.misc.copycat.view.screens.main_screen.lessons
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable

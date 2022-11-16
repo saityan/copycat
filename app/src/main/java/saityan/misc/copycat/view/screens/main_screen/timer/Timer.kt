@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.main_screen.timer
+package saityan.misc.copycat.view.screens.main_screen.timer
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
