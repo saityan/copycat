@@ -8,7 +8,6 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import saityan.misc.copycat.view.bottom_bar_screen.BottomBarScreen
 import saityan.misc.copycat.view.screens.main_screen.greeting.Greeting
 import saityan.misc.copycat.view.screens.main_screen.homework.Homework
 import saityan.misc.copycat.view.screens.main_screen.lessons.Lessons

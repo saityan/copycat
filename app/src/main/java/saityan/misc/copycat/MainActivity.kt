@@ -15,7 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 
-            HideBars()
+            HideSystemBars()
 
             CopycatTheme {
 
@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun HideBars() {
+fun HideSystemBars() {
     val systemUiController: SystemUiController = rememberSystemUiController()
     systemUiController.isSystemBarsVisible = false
 }
