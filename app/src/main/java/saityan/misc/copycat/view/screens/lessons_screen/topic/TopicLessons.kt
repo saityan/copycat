@@ -8,7 +8,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun LessonsTopic(
+fun TopicLessons(
     day: String
 ) {
     Row (
@@ -16,16 +16,16 @@ fun LessonsTopic(
         verticalAlignment = Alignment.Top,
     ) {
         Column(Modifier.weight(7f)) {
-            LessonTopicText(day = day)
+            TopicTextLesson(day = day)
         }
         Column(Modifier.weight(1f)) {
-            SearchIcon()
+            IconSearch()
         }
         Column(Modifier.weight(1f)) {
-            ListIcon()
+            IconList()
         }
         Column(Modifier.weight(1f)) {
-            BellIcon()
+            IconBell()
         }
     }
     Spacer(Modifier.height(32.dp))
@@ -33,6 +33,6 @@ fun LessonsTopic(
 
 @Preview(showBackground = false)
 @Composable
-fun GreetingRowPreview() {
-    LessonsTopic(day = "1 June")
+fun TopicLessonsPreview() {
+    TopicLessons(day = "1 June")
 }

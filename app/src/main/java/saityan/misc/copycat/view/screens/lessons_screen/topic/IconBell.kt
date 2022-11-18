@@ -7,14 +7,14 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ListIcon() {
+fun IconBell() {
     Surface(
         modifier = Modifier
             .height(32.dp)
@@ -23,16 +23,16 @@ fun ListIcon() {
     ) {
         IconButton(onClick = { /*Action*/ }) {
             Icon(
-                imageVector = Icons.Default.List,
-                contentDescription = "Settings",
+                imageVector = Icons.Default.Notifications,
+                contentDescription = "Profile",
                 tint = MaterialTheme.colors.onPrimary
             )
         }
     }
 }
 
-@Composable
 @Preview(showBackground = false)
-fun ListIconPreview() {
-    ListIcon()
+@Composable
+fun IconBellPreview() {
+    IconBell()
 }

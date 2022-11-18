@@ -7,14 +7,14 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.List
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun BellIcon() {
+fun IconList() {
     Surface(
         modifier = Modifier
             .height(32.dp)
@@ -23,16 +23,16 @@ fun BellIcon() {
     ) {
         IconButton(onClick = { /*Action*/ }) {
             Icon(
-                imageVector = Icons.Default.Notifications,
-                contentDescription = "Profile",
+                imageVector = Icons.Default.List,
+                contentDescription = "Settings",
                 tint = MaterialTheme.colors.onPrimary
             )
         }
     }
 }
 
-@Preview(showBackground = false)
 @Composable
-fun BellIconPreview() {
-    BellIcon()
+@Preview(showBackground = false)
+fun IconListPreview() {
+    IconList()
 }

@@ -9,11 +9,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import saityan.misc.copycat.ui.theme.Typography
 
 @Composable
-fun LessonTopicText(day: String) {
+fun TopicTextLesson(day: String) {
     Surface(
         color = MaterialTheme.colors.primary,
     ) {
-        Column() {
+        Column {
             Text(
                 text = "Classes",
                 style = Typography.body1
@@ -29,5 +29,5 @@ fun LessonTopicText(day: String) {
 @Preview(showBackground = false)
 @Composable
 fun GreetingPreview() {
-    LessonTopicText(day = "1 June")
+    TopicTextLesson(day = "1 June")
 }
