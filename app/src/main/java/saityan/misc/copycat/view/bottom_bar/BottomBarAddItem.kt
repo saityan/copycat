@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.bottom_bar_screen
+package saityan.misc.copycat.view.bottom_bar
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material.*

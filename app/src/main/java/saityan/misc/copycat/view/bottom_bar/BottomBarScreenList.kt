@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.bottom_bar_screen
+package saityan.misc.copycat.view.bottom_bar
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*

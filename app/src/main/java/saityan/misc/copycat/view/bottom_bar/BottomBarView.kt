@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.bottom_bar_screen
+package saityan.misc.copycat.view.bottom_bar
 
 import android.annotation.SuppressLint
 import androidx.compose.material.Scaffold

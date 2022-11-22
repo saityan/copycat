@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.bottom_bar_screen
+package saityan.misc.copycat.view.bottom_bar
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
