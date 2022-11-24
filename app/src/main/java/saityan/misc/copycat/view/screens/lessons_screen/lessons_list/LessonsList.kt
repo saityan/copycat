@@ -7,9 +7,11 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.paging.compose.LazyPagingItems
+import saityan.misc.copycat.model.Lesson
 
 @Composable
-fun LessonsList() {
+fun LessonsList(items: LazyPagingItems<Lesson>) {
     LazyColumn(
         modifier = Modifier.fillMaxWidth(),
         contentPadding = PaddingValues(all = 6.dp),
