@@ -11,7 +11,6 @@ import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.items
 import coil.annotation.ExperimentalCoilApi
 import saityan.misc.copycat.model.Lesson
-import androidx.compose.ui.tooling.preview.Preview
 
 @ExperimentalCoilApi
 @Composable
@@ -23,8 +22,8 @@ fun ListContent(items: LazyPagingItems<Lesson>) {
     ) {
         items(
             items = items,
-            key = { unsplashImage ->
-                unsplashImage.id
+            key = { lesson ->
+                lesson.id
             }
         ) {
 
