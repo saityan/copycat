@@ -8,15 +8,26 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
+import androidx.paging.compose.items
+import coil.annotation.ExperimentalCoilApi
 import saityan.misc.copycat.model.Lesson
+import androidx.compose.ui.tooling.preview.Preview
 
+@ExperimentalCoilApi
 @Composable
-fun LessonsList(items: LazyPagingItems<Lesson>) {
+fun ListContent(items: LazyPagingItems<Lesson>) {
     LazyColumn(
         modifier = Modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(all = 6.dp),
+        contentPadding = PaddingValues(all = 12.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
+        items(
+            items = items,
+            key = { unsplashImage ->
+                unsplashImage.id
+            }
+        ) {
 
+        }
     }
 }
