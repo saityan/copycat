@@ -1,12 +1,12 @@
 package saityan.misc.copycat.view.screens.lessons_screen.lessons_list
 
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun Lesson(
@@ -14,9 +14,9 @@ fun Lesson(
     teacher: String,
     timePeriod: String
 ) {
-    Box(
+    Column(
         modifier = Modifier.fillMaxWidth(),
-        contentAlignment = Alignment.Center
+        verticalArrangement = Arrangement.SpaceEvenly
     ) {
         Row {
            LessonTimePeriod(timePeriod = timePeriod)
@@ -28,4 +28,14 @@ fun Lesson(
             }
         }
     }
+}
+
+@Composable
+@Preview(showBackground = false)
+fun LessonPreview() {
+    Lesson(
+        lesson = "Math",
+        teacher = "Mr Thomas",
+        timePeriod = "10:00-10:45"
+    )
 }

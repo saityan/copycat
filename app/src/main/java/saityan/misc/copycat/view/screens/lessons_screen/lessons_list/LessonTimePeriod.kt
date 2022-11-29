@@ -9,7 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
 fun LessonTimePeriod(timePeriod: String) {
     Text(
         text = timePeriod,
-        style = MaterialTheme.typography.h3
+        style = MaterialTheme.typography.h4
     )
 }
 
