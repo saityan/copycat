@@ -14,7 +14,7 @@ fun GreetingText(string: String) {
     ) {
         Text(
             text = string,
-            style = Typography.body1
+            style = Typography.h5
         )
     }
 }

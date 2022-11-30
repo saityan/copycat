@@ -16,7 +16,7 @@ fun TopicTextLesson(day: String) {
         Column {
             Text(
                 text = "Classes",
-                style = Typography.body1
+                style = Typography.h5
             )
             Text(
                 text = day,
