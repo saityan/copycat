@@ -15,9 +15,9 @@ import coil.annotation.ExperimentalCoilApi
 @Composable
 fun ListContent() {
     val lessons = listOf(
-        Lesson(lesson = "History", teacher = "Ms Smith", timePeriod = "8:00-8:45"),
-        Lesson(lesson = "Math", teacher = "Mr Todd", timePeriod = "9:00-9:45"),
-        Lesson(lesson = "Literature", teacher ="Ms Stuart" , timePeriod = "10:00-10:45")
+        LessonCard(subject = "History", teacher = "Ms Smith", timePeriod = "8:00 - 8:45"),
+        LessonCard(subject = "Math", teacher = "Mr Todd", timePeriod = "9:00 - 9:45"),
+        LessonCard(subject = "Literature", teacher ="Ms Stuart" , timePeriod = "10:00 - 10:45")
     )
 
     LazyColumn(

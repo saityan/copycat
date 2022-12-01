@@ -10,7 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun Lesson(
-    lesson: String,
+    subject: String,
     teacher: String,
     timePeriod: String
 ) {
@@ -23,7 +23,7 @@ fun Lesson(
         }
         Row {
             Column {
-                LessonName(lesson)
+                LessonName(subject)
                 TeacherName(teacher)
             }
         }
@@ -34,7 +34,7 @@ fun Lesson(
 @Preview(showBackground = false)
 fun LessonPreview() {
     Lesson(
-        lesson = "Math",
+        subject = "Math",
         teacher = "Mr Thomas",
         timePeriod = "10:00-10:45"
     )
