@@ -31,6 +31,7 @@ fun BottomBar(navController: NavHostController) {
                     topStart = 16.dp,
                     topEnd = 16.dp
                 )
+                clip = true
             }
             .background(
                 color = Gray
