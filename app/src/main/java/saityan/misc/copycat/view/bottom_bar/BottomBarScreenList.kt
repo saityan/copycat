@@ -10,14 +10,14 @@ sealed class BottomBarScreenList(
     val icon: ImageVector
 ) {
     object Main : BottomBarScreenList(
-        route = "main",
-        title = "Main",
+        route = "home",
+        title = "Home",
         icon = Icons.Default.Home
     )
 
     object Lessons : BottomBarScreenList(
         route = "lessons",
-        title = "Lessons",
+        title = "Classes",
         icon = Icons.Default.Info
     )
 

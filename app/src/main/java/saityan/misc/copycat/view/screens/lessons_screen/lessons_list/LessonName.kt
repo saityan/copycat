@@ -9,7 +9,7 @@ import saityan.misc.copycat.ui.theme.Typography
 fun LessonName(lessonName: String = "History") {
     Text(
         text = lessonName,
-        style = Typography.subtitle1
+        style = Typography.body2
     )
 }
 

@@ -5,9 +5,9 @@ import androidx.compose.runtime.Composable
 import saityan.misc.copycat.ui.theme.Typography
 
 @Composable
-fun TeacherName(teacherName: String = "Mrs Thomas") {
+fun TeacherName(teacherName: String) {
     Text(
-        text = teacherName,
-        style = Typography.subtitle2
+        text = "Teacher: $teacherName",
+        style = Typography.subtitle1
     )
 }

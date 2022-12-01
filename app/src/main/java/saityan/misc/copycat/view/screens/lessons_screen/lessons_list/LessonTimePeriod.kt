@@ -9,7 +9,7 @@ import saityan.misc.copycat.ui.theme.Typography
 fun LessonTimePeriod(timePeriod: String) {
     Text(
         text = timePeriod,
-        style = Typography.body1,
+        style = Typography.body2,
     )
 }
 
