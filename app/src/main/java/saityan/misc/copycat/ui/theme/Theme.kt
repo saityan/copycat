@@ -10,7 +10,7 @@ private val DarkColorPalette = darkColors(
     primary = Black,
     onPrimary = White,
     onBackground = White,
-    background = Black,
+    background = Gray,
     surface = CardColor,
 
 )
