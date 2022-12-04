@@ -10,18 +10,16 @@ private val DarkColorPalette = darkColors(
     primary = Black,
     onPrimary = White,
     onBackground = White,
-    background = Gray,
-    surface = CardColor,
-
+    background = Black,
+    surface = DarkGray,
 )
 
 private val LightColorPalette = lightColors(
     primary = Black,
     onPrimary = White,
     onBackground = White,
-    secondary = White,
     background = Black,
-    surface = CardColor,
+    surface = DarkGray,
 
     /* Other default colors to override
     surface = Color(0xFFFFFBFE),

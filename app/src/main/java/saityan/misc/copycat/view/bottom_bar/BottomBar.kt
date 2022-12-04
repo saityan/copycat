@@ -1,16 +1,15 @@
 package saityan.misc.copycat.view.bottom_bar
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.BottomNavigation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import saityan.misc.copycat.ui.theme.Gray
 
 @Composable
 fun BottomBar(navController: NavHostController) {
@@ -25,17 +24,16 @@ fun BottomBar(navController: NavHostController) {
     val destination = navBackStackEntry?.destination
 
     BottomNavigation(
-        modifier = Modifier.
-            graphicsLayer {
+        backgroundColor = Color.DarkGray,
+        contentColor = Color.White,
+        modifier = Modifier
+            .graphicsLayer {
                 shape = RoundedCornerShape(
                     topStart = 16.dp,
                     topEnd = 16.dp
                 )
                 clip = true
             }
-            .background(
-                color = Gray
-            )
     ) {
         screens.forEach {
                 screen ->
