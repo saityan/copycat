@@ -6,9 +6,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import javax.security.auth.Subject
 
 @Composable
-fun Lessons() {
+fun Lesson(lessonsCount: Int, subject: String, timePeriod: String) {
     Row(verticalAlignment = Alignment.Top) {
         Column(
             modifier = Modifier
@@ -17,16 +18,18 @@ fun Lessons() {
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            LessonsHeader()
-
-            LessonsBody()
+            Row () {
+                LessonHeader(lessonsCount = lessonsCount)
+            }
+            Row() {
+                Column() {
+                    LessonIcon(subjectName = subject)
+                }
+                Column {
+                    LessonsBody(subject = subject, timePeriod = timePeriod)
+                }
+            }
         }
     }
     Spacer(Modifier.height(32.dp))
-}
-
-@Preview(showBackground = false)
-@Composable
-fun LessonsPreview() {
-    Lessons()
 }

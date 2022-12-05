@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import saityan.misc.copycat.ui.theme.Typography
 
 @Composable
-fun LessonTime(lessonTime: String = "8:00 - 8:45") {
+fun LessonTime(lessonTime: String) {
     Text(
         text = lessonTime,
         style = Typography.subtitle2

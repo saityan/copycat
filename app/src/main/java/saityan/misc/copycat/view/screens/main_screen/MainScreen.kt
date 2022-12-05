@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import saityan.misc.copycat.view.screens.main_screen.greeting.Greeting
 import saityan.misc.copycat.view.screens.main_screen.homework.Homework
-import saityan.misc.copycat.view.screens.main_screen.lessons.Lessons
+import saityan.misc.copycat.view.screens.main_screen.lessons.LessonCard
 import saityan.misc.copycat.view.screens.main_screen.timer.Timer
 
 @Composable
@@ -31,7 +31,7 @@ fun MainScreen() {
 
                 Timer()
 
-                Lessons()
+                LessonCard(lessonCount = 6, subject = "History", timePeriod = "8:00-8:45")
 
                 Homework()
             }

@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.ui.theme.Typography
 
 @Composable
-fun LessonsHeader() {
+fun LessonHeader(lessonsCount: Int) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -35,15 +35,24 @@ fun LessonsHeader() {
             modifier = Modifier.weight(1f)
         ) {
             Text(
-                text = "6 classes today",
+                text = lessonsCountNaming(lessonsCount),
                 style = Typography.body2
             )
         }
     }
 }
 
+fun lessonsCountNaming(lessonsCount: Int) : String {
+    return if (lessonsCount > 1)
+        "$lessonsCount classes today"
+    else if (lessonsCount == 1)
+        "1 class today"
+    else
+        "No classes today"
+}
+
 @Preview(showBackground = false)
 @Composable
 fun LessonsHeaderPreview() {
-    LessonsHeader()
+    LessonHeader(6)
 }

@@ -23,7 +23,7 @@ fun HomeworkLessonHeader(
 
         Column(modifier = Modifier.padding(3.dp)) {
 
-            LessonIcon()
+            LessonIcon(subjectName = "History")
 
         }
     }

@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun LessonIcon(
     icon: ImageVector = Icons.Default.Star,
-    subjectName: String = "History"
+    subjectName: String
 ) {
     Box(
         modifier = Modifier
@@ -37,5 +37,5 @@ fun LessonIcon(
 @Preview(showBackground = false)
 @Composable
 fun LessonIconPreview() {
-    LessonIcon()
+    LessonIcon(subjectName = "History")
 }

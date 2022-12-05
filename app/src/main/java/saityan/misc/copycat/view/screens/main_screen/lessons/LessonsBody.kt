@@ -6,16 +6,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun LessonsBody() {
+fun LessonsBody(subject: String, timePeriod: String) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Column {
-            LessonIcon()
+            LessonIcon(subjectName = subject)
         }
         Column {
-            LessonDesc()
+            LessonName(subject)
+            LessonTime(timePeriod)
         }
     }
 }
@@ -23,5 +24,5 @@ fun LessonsBody() {
 @Preview(showBackground = false)
 @Composable
 fun LessonsBodyPreview() {
-    LessonsBody()
+    LessonsBody(subject = "History", timePeriod = "8:00-8:45")
 }
