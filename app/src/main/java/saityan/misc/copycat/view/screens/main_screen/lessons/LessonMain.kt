@@ -4,12 +4,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import javax.security.auth.Subject
 
 @Composable
-fun Lesson(lessonsCount: Int, subject: String, timePeriod: String) {
+fun LessonMain(subject: String, timePeriod: String) {
     Row(verticalAlignment = Alignment.Top) {
         Column(
             modifier = Modifier
@@ -18,15 +16,12 @@ fun Lesson(lessonsCount: Int, subject: String, timePeriod: String) {
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Row () {
-                LessonHeader(lessonsCount = lessonsCount)
-            }
             Row() {
                 Column() {
-                    LessonIcon(subjectName = subject)
+                    LessonIconMain(subjectName = subject)
                 }
                 Column {
-                    LessonsBody(subject = subject, timePeriod = timePeriod)
+                    LessonsBodyMain(subject = subject, timePeriod = timePeriod)
                 }
             }
         }

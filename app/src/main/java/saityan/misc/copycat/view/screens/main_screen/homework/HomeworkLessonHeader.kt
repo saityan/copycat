@@ -5,8 +5,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import saityan.misc.copycat.view.screens.main_screen.lessons.LessonIcon
-import saityan.misc.copycat.view.screens.main_screen.lessons.LessonName
+import saityan.misc.copycat.view.screens.main_screen.lessons.LessonIconMain
+import saityan.misc.copycat.view.screens.main_screen.lessons.LessonNameMain
 
 @Composable
 fun HomeworkLessonHeader(
@@ -16,14 +16,14 @@ fun HomeworkLessonHeader(
     Row() {
         Column(modifier = Modifier.padding(3.dp)) {
 
-            LessonName(lessonName = lessonName)
+            LessonNameMain(lessonName = lessonName)
 
             DaysLeft(daysLeft = daysLeft)
         }
 
         Column(modifier = Modifier.padding(3.dp)) {
 
-            LessonIcon(subjectName = "History")
+            LessonIconMain(subjectName = "History")
 
         }
     }

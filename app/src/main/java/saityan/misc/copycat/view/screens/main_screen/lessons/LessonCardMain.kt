@@ -9,8 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun LessonCard(
-    lessonCount: Int,
+fun LessonCardMain(
     subject : String,
     timePeriod: String
 ) {
@@ -20,6 +19,9 @@ fun LessonCard(
             .padding(6.dp),
         color = MaterialTheme.colors.surface,
     ) {
-        Lesson(lessonsCount = lessonCount, subject = subject, timePeriod = timePeriod)
+        LessonMain(
+            subject = subject,
+            timePeriod = timePeriod
+        )
     }
 }

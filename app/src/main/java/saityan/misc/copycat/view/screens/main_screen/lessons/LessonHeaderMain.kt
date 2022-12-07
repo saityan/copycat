@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.ui.theme.Typography
 
 @Composable
-fun LessonHeader(lessonsCount: Int) {
+fun LessonHeaderMain(lessonsCount: Int) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -54,5 +54,5 @@ fun lessonsCountNaming(lessonsCount: Int) : String {
 @Preview(showBackground = false)
 @Composable
 fun LessonsHeaderPreview() {
-    LessonHeader(6)
+    LessonHeaderMain(6)
 }
