@@ -7,7 +7,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun LessonMain(subject: String, timePeriod: String) {
+fun LessonMain(
+    lessonsCount: Int,
+    subject: String,
+    timePeriod: String) {
     Row(verticalAlignment = Alignment.Top) {
         Column(
             modifier = Modifier
@@ -17,14 +20,11 @@ fun LessonMain(subject: String, timePeriod: String) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Row() {
-                Column() {
-                    LessonIconMain(subjectName = subject)
-                }
-                Column {
-                    LessonsBodyMain(subject = subject, timePeriod = timePeriod)
-                }
+                LessonHeaderMain(lessonsCount = lessonsCount)
+            }
+            Row() {
+                LessonCardMain(subject = subject, timePeriod = timePeriod)
             }
         }
     }
-    Spacer(Modifier.height(32.dp))
 }

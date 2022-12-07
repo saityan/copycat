@@ -19,9 +19,6 @@ fun LessonCardMain(
             .padding(6.dp),
         color = MaterialTheme.colors.surface,
     ) {
-        LessonMain(
-            subject = subject,
-            timePeriod = timePeriod
-        )
+        LessonsBodyMain(subject = subject, timePeriod = timePeriod)
     }
 }
