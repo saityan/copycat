@@ -31,7 +31,7 @@ fun MainScreen() {
 
                 Timer()
 
-                LessonMain(lessonsCount = 6, subject = "History", timePeriod = "8:00-8:45")
+                LessonMain(lessonsCount = 6, subject = "History", timePeriod = "8:00 — 8:45")
 
                 Homework()
             }

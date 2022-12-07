@@ -8,6 +8,6 @@ import saityan.misc.copycat.ui.theme.Typography
 fun LessonNameMain(lessonName: String) {
     Text(
         text = lessonName,
-        style = Typography.subtitle1
+        style = Typography.body2
     )
 }
