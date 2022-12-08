@@ -3,11 +3,13 @@ package saityan.misc.copycat.view.screens.main_screen
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.view.screens.main_screen.greeting.Greeting
 import saityan.misc.copycat.view.screens.main_screen.homework.Homework
 import saityan.misc.copycat.view.screens.main_screen.lessons.LessonMain
@@ -20,27 +22,16 @@ fun MainScreen() {
         color = MaterialTheme.colors.background,
     ) {
         Column(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.SpaceEvenly
+            modifier = Modifier.padding(bottom = 64.dp),
+            verticalArrangement = Arrangement.SpaceBetween
         ) {
-            Column(
-                verticalArrangement = Arrangement.SpaceEvenly,
-                modifier = Modifier.weight(9f)
-            ) {
-                Greeting(name = "Mike")
+            Greeting(name = "Mike")
 
-                Timer()
+            Timer()
 
-                LessonMain(lessonsCount = 6, subject = "History", timePeriod = "8:00 — 8:45")
+            LessonMain(lessonsCount = 6, subject = "History", timePeriod = "8:00 — 8:45")
 
-                Homework()
-            }
-            Column(
-                verticalArrangement = Arrangement.Bottom,
-                modifier = Modifier.weight(1f)
-            ) {
-
-            }
+            Homework()
         }
     }
 }

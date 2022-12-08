@@ -10,7 +10,7 @@ import saityan.misc.copycat.ui.theme.Typography
 @Composable
 fun GreetingText(string: String) {
     Surface(
-        color = MaterialTheme.colors.primary,
+        color = MaterialTheme.colors.primary
     ) {
         Text(
             text = string,

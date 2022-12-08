@@ -3,10 +3,13 @@ package saityan.misc.copycat.view.screens.lessons_screen
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
 import saityan.misc.copycat.view.screens.lessons_screen.lessons_list.ListContent
 import saityan.misc.copycat.view.screens.lessons_screen.topic.TopicLessons
@@ -14,18 +17,16 @@ import saityan.misc.copycat.view.screens.lessons_screen.topic.TopicLessons
 @OptIn(ExperimentalCoilApi::class)
 @Composable
 fun LessonsScreen() {
-    Column(
-        modifier = Modifier.fillMaxSize()
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = MaterialTheme.colors.background,
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.Top
+            modifier = Modifier.padding(bottom = 64.dp),
+            verticalArrangement = Arrangement.Top,
         ) {
             TopicLessons(day = "1 June")
-        }
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-        ) {
+
             ListContent()
         }
     }
