@@ -9,18 +9,15 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun Timer() {
-    Row(verticalAlignment = Alignment.Top) {
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            TimerHeader()
-            Spacer(Modifier.height(16.dp))
-            TimerBody()
-        }
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        TimerHeader()
+        Spacer(Modifier.height(16.dp))
+        TimerBody()
     }
-    Spacer(Modifier.height(32.dp))
 }
 
 @Preview(showBackground = false)
