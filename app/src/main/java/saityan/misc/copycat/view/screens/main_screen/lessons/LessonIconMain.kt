@@ -36,6 +36,6 @@ fun LessonIconMain(
 
 @Preview(showBackground = false)
 @Composable
-fun LessonIconPreview() {
+private fun LessonIconPreview() {
     LessonIconMain(subjectName = "History")
 }

@@ -36,6 +36,6 @@ fun LessonIcon(
 
 @Preview(showBackground = false)
 @Composable
-fun LessonIconPreview() {
+private fun LessonIconPreview() {
     LessonIcon()
 }

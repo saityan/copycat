@@ -15,6 +15,6 @@ fun TimerHeader(header: String = "Are you ready for exams?") {
 
 @Preview(showBackground = false)
 @Composable
-fun TimerHeaderPreview() {
+private fun TimerHeaderPreview() {
     TimerHeader()
 }

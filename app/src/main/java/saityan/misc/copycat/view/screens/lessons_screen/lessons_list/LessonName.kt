@@ -15,6 +15,6 @@ fun LessonName(lessonName: String = "History") {
 
 @Composable
 @Preview(showBackground = false)
-fun LessonNamePreview() {
+private fun LessonNamePreview() {
     LessonName()
 }

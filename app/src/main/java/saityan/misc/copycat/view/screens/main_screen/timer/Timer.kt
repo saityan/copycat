@@ -25,6 +25,6 @@ fun Timer() {
 
 @Preview(showBackground = false)
 @Composable
-fun TimerPreview() {
+private fun TimerPreview() {
     Timer()
 }

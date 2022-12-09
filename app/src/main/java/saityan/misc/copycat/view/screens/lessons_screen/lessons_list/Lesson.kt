@@ -32,7 +32,7 @@ fun Lesson(
 
 @Composable
 @Preview(showBackground = false)
-fun LessonPreview() {
+private fun LessonPreview() {
     Lesson(
         subject = "Math",
         teacher = "Mr Thomas",

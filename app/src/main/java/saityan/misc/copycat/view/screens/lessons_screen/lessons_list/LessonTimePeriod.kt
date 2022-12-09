@@ -15,6 +15,6 @@ fun LessonTimePeriod(timePeriod: String) {
 
 @Composable
 @Preview(showBackground = false)
-fun LessonTimePeriodPreview() {
+private fun LessonTimePeriodPreview() {
     LessonTimePeriod(timePeriod = "12:00-12:45")
 }

@@ -53,6 +53,6 @@ fun lessonsCountNaming(lessonsCount: Int) : String {
 
 @Preview(showBackground = false)
 @Composable
-fun LessonsHeaderPreview() {
+private fun LessonsHeaderPreview() {
     LessonHeaderMain(6)
 }

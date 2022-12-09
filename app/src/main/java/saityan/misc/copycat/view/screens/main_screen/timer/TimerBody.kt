@@ -64,6 +64,6 @@ fun TimerBody() {
 
 @Preview(showBackground = false)
 @Composable
-fun TimerBodyPreview() {
+private fun TimerBodyPreview() {
     TimerBody()
 }

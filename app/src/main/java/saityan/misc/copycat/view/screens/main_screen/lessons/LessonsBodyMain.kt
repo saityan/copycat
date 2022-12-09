@@ -28,6 +28,6 @@ fun LessonsBodyMain(subject: String, timePeriod: String) {
 
 @Preview(showBackground = false)
 @Composable
-fun LessonsBodyPreview() {
+private fun LessonsBodyPreview() {
     LessonsBodyMain(subject = "History", timePeriod = "8:00-8:45")
 }

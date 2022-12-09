@@ -31,6 +31,6 @@ fun FavoritesScreen() {
 
 @Composable
 @Preview
-fun LessonsScreenPreview() {
+private fun LessonsScreenPreview() {
     FavoritesScreen()
 }
