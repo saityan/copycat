@@ -29,8 +29,8 @@ fun BottomBar(navController: NavHostController) {
         modifier = Modifier
             .graphicsLayer {
                 shape = RoundedCornerShape(
-                    topStart = 16.dp,
-                    topEnd = 16.dp
+                    topStart = 32.dp,
+                    topEnd = 32.dp
                 )
                 clip = true
             }

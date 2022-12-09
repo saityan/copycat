@@ -21,10 +21,10 @@ fun LessonCardMain(
             .padding(6.dp)
             .graphicsLayer {
                 shape = RoundedCornerShape(
-                    topStart = 16.dp,
-                    topEnd = 16.dp,
-                    bottomStart = 16.dp,
-                    bottomEnd = 16.dp
+                    topStart = 32.dp,
+                    topEnd = 32.dp,
+                    bottomStart = 32.dp,
+                    bottomEnd = 32.dp
                 )
                 clip = true
             },
