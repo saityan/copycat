@@ -51,6 +51,6 @@ fun LessonCard(
 
 @Composable
 @Preview(showBackground = false)
-private fun LecconCardPreview() {
+private fun LessonCardPreview() {
     LessonCard(subject = "History", teacher = "Mrs Thomas", timePeriod = "8:00 - 8:45")
 }
