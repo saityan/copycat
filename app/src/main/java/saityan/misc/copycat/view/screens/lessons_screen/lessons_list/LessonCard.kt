@@ -3,7 +3,6 @@ package saityan.misc.copycat.view.screens.lessons_screen.lessons_list
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -23,7 +22,6 @@ fun LessonCard(
     Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(6.dp)
             .graphicsLayer {
                 shape = RoundedCornerShape(
                     topStart = 32.dp,
@@ -37,14 +35,13 @@ fun LessonCard(
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 6.dp),
+                .fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Lesson(subject, teacher, timePeriod)
-
             OpenInLesson()
+
+            Lesson(subject, teacher, timePeriod)
         }
     }
 }
