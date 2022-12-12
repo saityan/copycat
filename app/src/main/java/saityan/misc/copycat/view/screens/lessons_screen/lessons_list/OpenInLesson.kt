@@ -1,9 +1,11 @@
 package saityan.misc.copycat.view.screens.lessons_screen.lessons_list
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
@@ -18,14 +20,19 @@ fun OpenInLesson() {
         modifier = Modifier
             .vertical()
             .rotate(90f)
-            .background(Color.Transparent),
+            .background(MaterialTheme.colors.secondaryVariant),
         shape = RoundedCornerShape(
-            bottomStart = 32.dp,
-            bottomEnd = 32.dp
+            topStart = 32.dp,
+            topEnd = 32.dp
         ),
+        colors = ButtonDefaults.buttonColors(Color.Transparent),
+        elevation = null,
         onClick = { /*TODO*/ },
     ) {
-
+        Text(
+            text = "Open in",
+            style = MaterialTheme.typography.body2
+        )
     }
 }
 
