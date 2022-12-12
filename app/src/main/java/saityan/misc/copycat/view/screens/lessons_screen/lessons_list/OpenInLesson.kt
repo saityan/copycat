@@ -1,12 +1,15 @@
 package saityan.misc.copycat.view.screens.lessons_screen.lessons_list
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
@@ -29,10 +32,23 @@ fun OpenInLesson() {
         elevation = null,
         onClick = { /*TODO*/ },
     ) {
-        Text(
-            text = "Open in",
-            style = MaterialTheme.typography.body2
-        )
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                modifier = Modifier.padding(end = 4.dp),
+                text = "Open in",
+                style = MaterialTheme.typography.body2
+            )
+
+            Icon(
+                modifier = Modifier.rotate(-90f),
+                imageVector = Icons.Default.ArrowForward,
+                contentDescription = "",
+                tint = MaterialTheme.colors.onPrimary
+            )
+        }
     }
 }
 
