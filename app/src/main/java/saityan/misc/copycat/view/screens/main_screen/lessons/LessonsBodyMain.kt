@@ -10,7 +10,6 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun LessonsBodyMain(subject: String, timePeriod: String) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Start,
         verticalAlignment = Alignment.CenterVertically
     ) {
