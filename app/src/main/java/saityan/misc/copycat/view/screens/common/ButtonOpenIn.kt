@@ -1,4 +1,4 @@
-package saityan.misc.copycat.view.screens.lessons_screen.lessons_list
+package saityan.misc.copycat.view.screens.common
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -18,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun OpenInLesson() {
+fun ButtonOpenIn() {
     Button(
         modifier = Modifier
             .vertical()
@@ -55,7 +55,7 @@ fun OpenInLesson() {
 @Composable
 @Preview(showBackground = false)
 private fun OpenInLessonPreview() {
-    OpenInLesson()
+    ButtonOpenIn()
 }
 
 fun Modifier.vertical() =

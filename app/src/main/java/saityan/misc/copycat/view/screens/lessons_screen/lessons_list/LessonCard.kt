@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import saityan.misc.copycat.view.screens.common.ButtonOpenIn
 
 @Composable
 fun LessonCard(
@@ -43,7 +44,7 @@ fun LessonCard(
         ) {
             Lesson(subject, teacher, timePeriod)
 
-            OpenInLesson()
+            ButtonOpenIn()
         }
     }
 }
