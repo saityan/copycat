@@ -6,6 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
@@ -13,13 +14,16 @@ import androidx.compose.ui.unit.dp
 fun TimerBody() {
     Row(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceEvenly,
+        horizontalArrangement = Arrangement.SpaceEvenly
     ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             Text(
                 text = "10",
                 color = MaterialTheme.colors.onPrimary,
-                fontSize = MaterialTheme.typography.h2.fontSize,
+                fontSize = MaterialTheme.typography.h3.fontSize,
+                fontWeight = FontWeight.Normal
             )
             Spacer(Modifier.height(16.dp))
 
@@ -34,7 +38,8 @@ fun TimerBody() {
             Text(
                 text = "00",
                 color = MaterialTheme.colors.onPrimary,
-                fontSize = MaterialTheme.typography.h2.fontSize,
+                fontSize = MaterialTheme.typography.h3.fontSize,
+                fontWeight = FontWeight.Normal
             )
             Spacer(Modifier.height(16.dp))
 
@@ -49,7 +54,8 @@ fun TimerBody() {
             Text(
                 text = "00",
                 color = MaterialTheme.colors.onPrimary,
-                fontSize = MaterialTheme.typography.h2.fontSize,
+                fontSize = MaterialTheme.typography.h3.fontSize,
+                fontWeight = FontWeight.Normal
             )
             Spacer(Modifier.height(16.dp))
 
