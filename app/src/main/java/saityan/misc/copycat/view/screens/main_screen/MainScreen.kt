@@ -1,7 +1,7 @@
 package saityan.misc.copycat.view.screens.main_screen
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
@@ -21,17 +21,24 @@ fun MainScreen() {
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colors.background,
     ) {
-        Column(
-            modifier = Modifier.padding(bottom = 64.dp),
-            verticalArrangement = Arrangement.SpaceBetween
-        ) {
-            Greeting(name = "Mike")
+        Column() {
+            Row {
+                Greeting(name = "Mike")
+            }
 
-            TimerCard()
+            Row(
+                modifier = Modifier.padding(top = 30.dp, bottom = 12.dp)
+            ) {
+                TimerCard()
+            }
 
-            LessonMain(lessonsCount = 6, subject = "History", timePeriod = "8:00 — 8:45")
+            Row(modifier = Modifier.padding(vertical = 12.dp)) {
+                LessonMain(lessonsCount = 6, subject = "History", timePeriod = "8:00 — 8:45")
+            }
 
-            Homework()
+            Row(modifier = Modifier.padding(top = 12.dp, bottom = 64.dp)) {
+                Homework()
+            }
         }
     }
 }
