@@ -12,7 +12,7 @@ import coil.annotation.ExperimentalCoilApi
 
 @ExperimentalCoilApi
 @Composable
-fun ListContent() {
+fun LessonsList() {
     val lessons = listOf(
         LessonCard(subject = "History", teacher = "Mrs Thomas", timePeriod = "8:00 - 8:45"),
         LessonCard(subject = "Literature", teacher = "Mrs Barros", timePeriod = "9:00 - 9:45"),

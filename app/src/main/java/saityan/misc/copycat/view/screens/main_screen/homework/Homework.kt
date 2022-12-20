@@ -26,6 +26,6 @@ fun Homework() {
 
 @Preview(showBackground = false)
 @Composable
-fun HomeworkPreview() {
+private fun HomeworkPreview() {
     Homework()
 }

@@ -9,7 +9,7 @@ import saityan.misc.copycat.view.screens.main_screen.lessons.LessonIconMain
 import saityan.misc.copycat.view.screens.main_screen.lessons.LessonNameMain
 
 @Composable
-fun HomeworkLessonHeader(
+fun HomeworkSubjectHeader(
     lessonName: String = "Literature",
     daysLeft: Int = 2
 ) {
@@ -31,6 +31,6 @@ fun HomeworkLessonHeader(
 
 @Preview(showBackground = false)
 @Composable
-fun HomeworkLessonHeaderPreview() {
-    HomeworkLessonHeader()
+private fun HomeworkSubjectHeaderPreview() {
+    HomeworkSubjectHeader()
 }

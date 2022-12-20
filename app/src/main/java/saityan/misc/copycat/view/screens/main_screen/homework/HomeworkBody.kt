@@ -5,11 +5,11 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun HomeworkBody() {
-    HomeworkLessonHeader()
+    HomeworkSubjectHeader()
 }
 
 @Preview(showBackground = false)
 @Composable
-fun HomeworkBodyPreview() {
+private fun HomeworkBodyPreview() {
     HomeworkBody()
 }

@@ -28,6 +28,6 @@ fun HomeworkHeader() {
 
 @Preview(showBackground = false)
 @Composable
-fun HomeworkHeaderPreview() {
+private fun HomeworkHeaderPreview() {
     HomeworkHeader()
 }
