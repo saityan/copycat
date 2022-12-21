@@ -5,7 +5,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun HomeworkBody() {
-    HomeworkSubjectHeader()
+
 }
 
 @Preview(showBackground = false)

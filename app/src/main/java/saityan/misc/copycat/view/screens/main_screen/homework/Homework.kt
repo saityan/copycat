@@ -9,18 +9,16 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun Homework() {
-    Row(verticalAlignment = Alignment.Top) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 6.dp),
-            verticalArrangement = Arrangement.Top,
-            horizontalAlignment = Alignment.Start
-        ) {
-            HomeworkHeader()
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 6.dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start
+    ) {
+        HomeworkHeader()
 
-            HomeworkList()
-        }
+        HomeworkList()
     }
 }
 

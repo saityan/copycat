@@ -10,8 +10,8 @@ import saityan.misc.copycat.view.screens.main_screen.lessons.LessonNameMain
 
 @Composable
 fun HomeworkSubjectHeader(
-    lessonName: String = "Literature",
-    daysLeft: Int = 2
+    lessonName: String,
+    daysLeft: Int
 ) {
     Row() {
         Column(modifier = Modifier.padding(3.dp)) {
@@ -32,5 +32,5 @@ fun HomeworkSubjectHeader(
 @Preview(showBackground = false)
 @Composable
 private fun HomeworkSubjectHeaderPreview() {
-    HomeworkSubjectHeader()
+    HomeworkSubjectHeader("Literature", 2)
 }
