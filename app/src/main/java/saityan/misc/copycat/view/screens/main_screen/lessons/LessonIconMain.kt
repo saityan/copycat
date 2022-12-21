@@ -15,9 +15,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun LessonIconMain(
+fun SubjectIconMain(
     icon: ImageVector = Icons.Default.Star,
-    subjectName: String
+    subject: String
 ) {
     Box(
         modifier = Modifier
@@ -27,7 +27,7 @@ fun LessonIconMain(
         IconButton(onClick = { /*Action*/ }) {
             Icon(
                 imageVector = icon,
-                contentDescription = subjectName,
+                contentDescription = subject,
                 tint = MaterialTheme.colors.onPrimary
             )
         }
@@ -36,6 +36,6 @@ fun LessonIconMain(
 
 @Preview(showBackground = false)
 @Composable
-private fun LessonIconPreview() {
-    LessonIconMain(subjectName = "History")
+private fun SubjectIconPreview() {
+    SubjectIconMain(subject = "History")
 }

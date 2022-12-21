@@ -16,10 +16,10 @@ fun LessonsBodyMain(subject: String, timePeriod: String) {
         Column(
             modifier = Modifier.padding(12.dp)
         ) {
-            LessonIconMain(subjectName = subject)
+            SubjectIconMain(subject = subject)
         }
         Column {
-            LessonNameMain(subject)
+            SubjectMain(subject)
             LessonTimeMain(timePeriod)
         }
     }

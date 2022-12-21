@@ -16,7 +16,7 @@ fun HomeworkHeader() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 6.dp),
+            .padding(6.dp),
         verticalAlignment = Alignment.Top
     ) {
         Text(

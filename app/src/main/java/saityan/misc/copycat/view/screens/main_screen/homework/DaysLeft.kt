@@ -10,6 +10,10 @@ fun DaysLeft(daysLeft: Int) {
     Text(
         text = "$daysLeft days left",
         style = Typography.body1,
-        color = Color.Magenta
+        color = if (daysLeft < 4) {
+            Color.Red
+        } else {
+            Color.DarkGray
+        }
     )
 }
