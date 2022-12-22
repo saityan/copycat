@@ -15,11 +15,12 @@ import androidx.compose.ui.unit.dp
 fun HomeworkCard(
     subject: String,
     daysLeft: Int,
-    desc: String
+    desc: String,
+    icons: List<Int>
 ) {
     Surface(
         modifier = Modifier
-            .padding(vertical = 6.dp, horizontal = 6.dp)
+            .padding(6.dp)
             .graphicsLayer {
                 shape = RoundedCornerShape(
                     topStart = 32.dp,
@@ -36,7 +37,7 @@ fun HomeworkCard(
         ) {
             HomeworkSubjectHeader(subject = subject, daysLeft = daysLeft)
 
-            HomeworkBody(desc)
+            HomeworkBody(desc, icons)
         }
     }
 }
@@ -47,5 +48,7 @@ private fun HomeworkCardPreview() {
     HomeworkCard(
         subject = "Literature",
         daysLeft = 2,
-        desc = "")
+        desc = "",
+        listOf(1, 2)
+    )
 }

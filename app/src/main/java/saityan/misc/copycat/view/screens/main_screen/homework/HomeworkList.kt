@@ -12,7 +12,11 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun HomeworkList() {
     val homework = listOf(
-        HomeworkCard("Literature", 2, "Read scenes 1.1-1.12 of The Master and Margarita"),
+        HomeworkCard(
+            "Literature",
+            2, "Read scenes 1.1-1.12 of The Master and Margarita",
+            listOf(1, 2)
+        ),
         //HomeworkCard("Physics", 5, "Learn Newton's law of motion"),
     )
     LazyRow(
