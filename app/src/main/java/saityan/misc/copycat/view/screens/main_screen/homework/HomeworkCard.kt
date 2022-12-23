@@ -33,7 +33,7 @@ fun HomeworkCard(
         color = MaterialTheme.colors.surface,
     ) {
         Column(
-            modifier = Modifier.padding(12.dp)
+            modifier = Modifier.padding(12.dp),
         ) {
             HomeworkSubjectHeader(subject = subject, daysLeft = daysLeft)
 
@@ -48,7 +48,7 @@ private fun HomeworkCardPreview() {
     HomeworkCard(
         subject = "Literature",
         daysLeft = 2,
-        desc = "",
+        desc = "Read scenes 1.1-1.12 of The Master and Margarita",
         listOf(1, 2)
     )
 }

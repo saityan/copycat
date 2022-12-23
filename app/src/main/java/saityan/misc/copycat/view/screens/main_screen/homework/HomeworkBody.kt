@@ -16,7 +16,7 @@ import saityan.misc.copycat.R
 
 @Composable
 fun HomeworkBody(desc: String, icons: List<Int>) {
-    Column() {
+    Column {
         Text(
             text = desc,
             style = MaterialTheme.typography.subtitle2
@@ -57,10 +57,10 @@ fun HomeworkBody(desc: String, icons: List<Int>) {
 @Composable
 @Preview(showBackground = false)
 private fun HomeworkBodyPreview() {
-    HomeworkBody(desc = "This is a preview", icons = listOf(3, 1))
+    HomeworkBody(desc = "This is a text preview", icons = listOf(3, 1))
 }
 
-fun returnIconName(number: Int): Int = when(number) {
+private fun returnIconName(number: Int): Int = when(number) {
     2 -> R.drawable.ic_2
         3 -> R.drawable.ic_3
         4 -> R.drawable.ic_4
@@ -68,7 +68,7 @@ fun returnIconName(number: Int): Int = when(number) {
     }
 
 @Composable
-fun returnColor(number: Int): Color = when(number) {
+private fun returnColor(number: Int): Color = when(number) {
     2 -> MaterialTheme.colors.secondary
     3 -> MaterialTheme.colors.secondaryVariant
     4 -> MaterialTheme.colors.secondary

@@ -13,7 +13,9 @@ fun HomeworkSubjectHeader(
     subject: String,
     daysLeft: Int
 ) {
-    Row {
+    Row(
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
         Column(modifier = Modifier.padding(3.dp)) {
 
             SubjectMain(lessonName = subject)
@@ -23,7 +25,7 @@ fun HomeworkSubjectHeader(
 
         Column(modifier = Modifier.padding(3.dp)) {
 
-            SubjectIconMain(subject = "History")
+            SubjectIconMain(subject = subject)
 
         }
     }
