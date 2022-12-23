@@ -2,6 +2,7 @@ package saityan.misc.copycat.view.screens.lessons_screen.lessons_list
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -16,10 +17,15 @@ fun Lesson(
         verticalArrangement = Arrangement.SpaceEvenly,
         modifier = Modifier.padding(start = 6.dp)
     ) {
-        Row {
-           LessonTimePeriod(timePeriod = timePeriod)
-        }
-        Row {
+        LessonTimePeriod(timePeriod = timePeriod)
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(
+                modifier = Modifier.padding(6.dp)
+            ) {
+                LessonIcon(subject)
+            }
             Column {
                 LessonName(subject)
                 TeacherName(teacher)

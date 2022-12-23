@@ -25,6 +25,7 @@ fun LessonsList() {
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         items(lessons) {
+
         }
     }
 }
