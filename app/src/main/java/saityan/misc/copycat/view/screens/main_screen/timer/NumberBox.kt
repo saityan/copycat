@@ -21,18 +21,18 @@ fun NumberBox(number: Int) {
         modifier = Modifier
             .graphicsLayer {
                 shape = RoundedCornerShape(
-                    topStart = 5.dp,
-                    topEnd = 5.dp,
-                    bottomStart = 5.dp,
-                    bottomEnd = 5.dp
+                    topStart = 6.dp,
+                    topEnd = 6.dp,
+                    bottomStart = 6.dp,
+                    bottomEnd = 6.dp
                 )
                 clip = true
             }
             .background(
                 color = MaterialTheme.colors.onSurface
             )
-            .height(28.dp)
-            .width(24.dp),
+            .height(40.dp)
+            .width(30.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
