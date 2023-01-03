@@ -17,7 +17,7 @@ fun TimerHeader(header: String = "Are you ready for exams?") {
         Text(
             text = header,
             color = MaterialTheme.colors.onPrimary,
-            fontSize = MaterialTheme.typography.h5.fontSize
+            fontSize = MaterialTheme.typography.h6.fontSize
         )
     }
 }
