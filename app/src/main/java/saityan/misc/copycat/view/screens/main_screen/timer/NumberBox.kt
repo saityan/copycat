@@ -1,9 +1,7 @@
 package saityan.misc.copycat.view.screens.main_screen.timer
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -17,32 +15,36 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun NumberBox(number: Int) {
-    Box(
-        modifier = Modifier
-            .graphicsLayer {
-                shape = RoundedCornerShape(
-                    topStart = 6.dp,
-                    topEnd = 6.dp,
-                    bottomStart = 6.dp,
-                    bottomEnd = 6.dp
-                )
-                clip = true
-            }
-            .background(
-                color = MaterialTheme.colors.onSurface
-            )
-            .height(40.dp)
-            .width(30.dp),
-        contentAlignment = Alignment.Center
+    Column(
+        modifier = Modifier.padding(2.dp)
     ) {
-        Text(
-            text = if (number > -1 && number < 10)
-                number.toString()
-            else "0",
-            color = MaterialTheme.colors.onPrimary,
-            fontSize = MaterialTheme.typography.h6.fontSize,
-            fontWeight = FontWeight.Normal
-        )
+        Box(
+            modifier = Modifier
+                .graphicsLayer {
+                    shape = RoundedCornerShape(
+                        topStart = 8.dp,
+                        topEnd = 8.dp,
+                        bottomStart = 8.dp,
+                        bottomEnd = 8.dp
+                    )
+                    clip = true
+                }
+                .background(
+                    color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f)
+                )
+                .height(48.dp)
+                .width(34.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = if (number > -1 && number < 10)
+                    number.toString()
+                else "0",
+                color = MaterialTheme.colors.onPrimary,
+                fontSize = MaterialTheme.typography.h6.fontSize,
+                fontWeight = FontWeight.Bold
+            )
+        }
     }
 }
 
