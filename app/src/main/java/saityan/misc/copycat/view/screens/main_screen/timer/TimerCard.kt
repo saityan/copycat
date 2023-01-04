@@ -22,7 +22,7 @@ fun TimerCard() {
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(
-                        MaterialTheme.colors.primary,
+                        MaterialTheme.colors.primaryVariant,
                         MaterialTheme.colors.secondary
                     )
                 ),
