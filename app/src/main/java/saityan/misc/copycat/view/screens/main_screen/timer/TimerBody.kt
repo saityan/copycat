@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 fun TimerBody() {
     Row(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceEvenly
+        horizontalArrangement = Arrangement.Center
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
@@ -31,6 +31,8 @@ fun TimerBody() {
             Spacer(Modifier.height(16.dp))
         }
 
+        ColonBox()
+
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Row {
                 NumberBox(number = 0)
@@ -44,6 +46,8 @@ fun TimerBody() {
             )
             Spacer(Modifier.height(16.dp))
         }
+
+        ColonBox()
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Row {

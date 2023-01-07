@@ -33,7 +33,7 @@ fun NumberBox(number: Int) {
                     color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f)
                 )
                 .height(48.dp)
-                .width(34.dp),
+                .width(36.dp),
             contentAlignment = Alignment.Center
         ) {
             Text(
