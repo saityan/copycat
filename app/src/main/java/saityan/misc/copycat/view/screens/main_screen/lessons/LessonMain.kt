@@ -10,7 +10,8 @@ import androidx.compose.ui.unit.dp
 fun LessonMain(
     lessonsCount: Int,
     subject: String,
-    timePeriod: String) {
+    timePeriod: String
+) {
     Row(verticalAlignment = Alignment.Top) {
         Column(
             modifier = Modifier
@@ -19,12 +20,8 @@ fun LessonMain(
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Row() {
-                LessonHeaderMain(lessonsCount = lessonsCount)
-            }
-            Row() {
-                LessonCardMain(subject = subject, timePeriod = timePeriod)
-            }
+            LessonHeaderMain(lessonsCount = lessonsCount)
+            LessonCardMain(subject = subject, timePeriod = timePeriod)
         }
     }
 }

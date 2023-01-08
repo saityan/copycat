@@ -14,7 +14,7 @@ fun LessonsBodyMain(subject: String, timePeriod: String) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(
-            modifier = Modifier.padding(12.dp)
+            modifier = Modifier.padding(horizontal = 12.dp)
         ) {
             SubjectIconMain(subject = subject)
         }

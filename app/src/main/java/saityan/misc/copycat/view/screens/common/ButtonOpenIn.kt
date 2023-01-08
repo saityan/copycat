@@ -30,7 +30,7 @@ fun ButtonOpenIn() {
         ),
         colors = ButtonDefaults.buttonColors(Color.Transparent),
         elevation = null,
-        onClick = { /*TODO*/ },
+        onClick = {},
     ) {
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -39,7 +39,8 @@ fun ButtonOpenIn() {
             Text(
                 modifier = Modifier.padding(end = 4.dp),
                 text = "Open in",
-                style = MaterialTheme.typography.body2
+                style = MaterialTheme.typography.button,
+                color = MaterialTheme.colors.onPrimary
             )
 
             Icon(
