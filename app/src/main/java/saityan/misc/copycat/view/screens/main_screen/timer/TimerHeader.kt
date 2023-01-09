@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun TimerHeader(header: String = "Are you ready for exams?") {
     Row(
-        modifier = Modifier.padding(vertical = 24.dp)
+        modifier = Modifier.padding(top = 24.dp, bottom = 18.dp)
     ) {
         Text(
             text = header,

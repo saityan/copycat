@@ -18,7 +18,7 @@ fun TimerCard() {
     Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(6.dp)
+            .padding(horizontal = 6.dp)
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(

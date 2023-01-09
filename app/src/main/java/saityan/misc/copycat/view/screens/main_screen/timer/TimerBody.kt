@@ -6,6 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
@@ -22,13 +23,15 @@ fun TimerBody() {
                 NumberBox(number = 1)
                 NumberBox(number = 0)
             }
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(8.dp))
 
             Text(
                 text = "Days",
-                color = MaterialTheme.colors.onPrimary
+                color = MaterialTheme.colors.onPrimary,
+                fontSize = MaterialTheme.typography.subtitle1.fontSize,
+                fontWeight = FontWeight.Normal
             )
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(24.dp))
         }
 
         ColonBox()
@@ -38,13 +41,15 @@ fun TimerBody() {
                 NumberBox(number = 0)
                 NumberBox(number = 0)
             }
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(8.dp))
 
             Text(
                 text = "Hours",
-                color = MaterialTheme.colors.onPrimary
+                color = MaterialTheme.colors.onPrimary,
+                fontSize = MaterialTheme.typography.subtitle1.fontSize,
+                fontWeight = FontWeight.Normal
             )
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(24.dp))
         }
 
         ColonBox()
@@ -54,13 +59,15 @@ fun TimerBody() {
                 NumberBox(number = 0)
                 NumberBox(number = 0)
             }
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(8.dp))
 
             Text(
                 text = "Minutes",
-                color = MaterialTheme.colors.onPrimary
+                color = MaterialTheme.colors.onPrimary,
+                fontSize = MaterialTheme.typography.subtitle1.fontSize,
+                fontWeight = FontWeight.Normal
             )
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(24.dp))
         }
     }
 }
