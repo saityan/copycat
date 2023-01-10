@@ -30,7 +30,7 @@ fun MainScreen() {
             Spacer(modifier = Modifier.height(24.dp))
 
             LessonMain(lessonsCount = 6, subject = "History", timePeriod = "8:00 — 8:45")
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
             Homework()
         }

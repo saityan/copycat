@@ -1,7 +1,6 @@
 package saityan.misc.copycat.view.screens.main_screen.homework
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -21,6 +20,8 @@ fun HomeworkCard(
     Surface(
         modifier = Modifier
             .padding(6.dp)
+            .width(200.dp)
+            .height(175.dp)
             .graphicsLayer {
                 shape = RoundedCornerShape(
                     topStart = 32.dp,
@@ -33,11 +34,14 @@ fun HomeworkCard(
         color = MaterialTheme.colors.surface,
     ) {
         Column(
-            modifier = Modifier.padding(12.dp),
+            verticalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier.padding(18.dp)
         ) {
             HomeworkSubjectHeader(subject = subject, daysLeft = daysLeft)
 
-            HomeworkBody(desc, icons)
+            HomeworkDesc(desc = desc)
+
+            HomeworkIcons(icons = icons)
         }
     }
 }

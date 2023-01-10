@@ -14,16 +14,20 @@ fun HomeworkSubjectHeader(
     daysLeft: Int
 ) {
     Row(
-        horizontalArrangement = Arrangement.SpaceBetween
+        horizontalArrangement = Arrangement.SpaceBetween,
+        modifier = Modifier.width(200.dp)
     ) {
         Column(modifier = Modifier.padding(3.dp)) {
 
             SubjectMain(lessonName = subject)
+            Spacer(modifier = Modifier.height(8.dp))
 
             DaysLeft(daysLeft = daysLeft)
         }
 
-        Column(modifier = Modifier.padding(3.dp)) {
+        Column(
+            modifier = Modifier.padding(3.dp)
+        ) {
 
             SubjectIconMain(subject = subject)
 

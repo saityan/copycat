@@ -9,11 +9,11 @@ import saityan.misc.copycat.ui.theme.Typography
 fun DaysLeft(daysLeft: Int) {
     Text(
         text = "$daysLeft days left",
-        style = Typography.body1,
+        style = Typography.subtitle2,
         color = if (daysLeft < 4) {
             Color.Red
         } else {
-            Color.DarkGray
+            Typography.subtitle2.color
         }
     )
 }
