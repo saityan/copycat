@@ -22,7 +22,7 @@ fun HomeworkList() {
                 "Physics",
                 5,
                 "Learn Newton's law of motion",
-                listOf(2, 3)
+                listOf(2, 4)
             ),
         )
     }

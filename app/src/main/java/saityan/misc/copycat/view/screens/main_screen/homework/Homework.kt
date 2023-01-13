@@ -19,6 +19,7 @@ fun Homework() {
         HomeworkHeader()
 
         HomeworkList()
+        Spacer(modifier = Modifier.height(50.dp))
     }
 }
 
