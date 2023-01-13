@@ -15,7 +15,7 @@ import saityan.misc.copycat.R
 import saityan.misc.copycat.ui.theme.Typography
 
 @Composable
-fun TimerIcon(paddingTop: Int) {
+fun TimerIcon(color: Color, paddingTop: Int) {
     Box(
         modifier = Modifier
             .padding(top = paddingTop.dp)
@@ -25,7 +25,7 @@ fun TimerIcon(paddingTop: Int) {
         Icon(
             painter = painterResource(id = R.drawable.ic_clock),
             contentDescription = "",
-            tint = Typography.subtitle2.color
+            tint = color
         )
     }
 }
@@ -33,5 +33,5 @@ fun TimerIcon(paddingTop: Int) {
 @Composable
 @Preview
 private fun TimerIconPreview() {
-    TimerIcon(12)
+    TimerIcon(Typography.subtitle2.color, 12)
 }

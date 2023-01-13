@@ -13,7 +13,7 @@ import saityan.misc.copycat.view.screens.common.TimerIcon
 @Composable
 fun LessonTimeMain(lessonTime: String) {
     Row {
-        TimerIcon(12)
+        TimerIcon(Typography.subtitle2.color, 12)
 
         Text(
             modifier = Modifier
