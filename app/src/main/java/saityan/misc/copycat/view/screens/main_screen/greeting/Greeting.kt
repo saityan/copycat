@@ -18,7 +18,7 @@ fun Greeting(
         verticalAlignment = Alignment.Top,
     ) {
         Column(Modifier.weight(7f)) {
-            GreetingText(string = "Hi, ${name}!")
+            GreetingText(name = name)
         }
         Column(Modifier.weight(1f)) {
             SearchIcon()

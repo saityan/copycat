@@ -21,7 +21,7 @@ fun HomeworkList() {
             HomeworkCard(
                 "Physics",
                 5,
-                "Learn Newton's law of motion",
+                "Learn Newton's laws of motion",
                 listOf(2, 4)
             ),
         )
