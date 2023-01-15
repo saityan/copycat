@@ -25,7 +25,7 @@ fun LessonsScreen() {
             modifier = Modifier.padding(bottom = 64.dp),
             verticalArrangement = Arrangement.Top,
         ) {
-            TopicLessons(day = "1 June")
+            TopicLessons(day = "Today, 1 June")
 
             LessonsList()
         }
