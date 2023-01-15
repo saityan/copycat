@@ -10,14 +10,12 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun Lesson(
     subject: String,
-    teacher: String,
-    timePeriod: String
+    teacher: String
 ) {
     Column(
         verticalArrangement = Arrangement.SpaceEvenly,
         modifier = Modifier.padding(start = 6.dp)
     ) {
-        LessonTimePeriod(timePeriod = timePeriod)
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -40,6 +38,5 @@ private fun LessonPreview() {
     Lesson(
         subject = "Math",
         teacher = "Mr Thomas",
-        timePeriod = "10:00-10:45"
     )
 }
