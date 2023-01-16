@@ -18,37 +18,41 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ButtonOpenIn() {
-    Button(
-        modifier = Modifier
-            .vertical()
-            .rotate(90f)
-            .background(MaterialTheme.colors.secondaryVariant),
-        shape = RoundedCornerShape(
-            topStart = 32.dp,
-            topEnd = 32.dp
-        ),
-        colors = ButtonDefaults.buttonColors(Color.Transparent),
-        elevation = null,
-        onClick = {},
-    ) {
-        Row(
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+fun ButtonOpenIn(
+    isOpenedIn: Boolean = true
+) {
+    if (isOpenedIn) {
+        Button(
+            modifier = Modifier
+                .vertical()
+                .rotate(90f)
+                .background(MaterialTheme.colors.secondaryVariant),
+            shape = RoundedCornerShape(
+                topStart = 32.dp,
+                topEnd = 32.dp
+            ),
+            colors = ButtonDefaults.buttonColors(Color.Transparent),
+            elevation = null,
+            onClick = {},
         ) {
-            Text(
-                modifier = Modifier.padding(end = 4.dp),
-                text = "Open in",
-                style = MaterialTheme.typography.button,
-                color = MaterialTheme.colors.onPrimary
-            )
+            Row(
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    modifier = Modifier.padding(end = 4.dp),
+                    text = "Open in",
+                    style = MaterialTheme.typography.button,
+                    color = MaterialTheme.colors.onPrimary
+                )
 
-            Icon(
-                modifier = Modifier.rotate(-90f),
-                imageVector = Icons.Default.ArrowForward,
-                contentDescription = "",
-                tint = MaterialTheme.colors.onPrimary
-            )
+                Icon(
+                    modifier = Modifier.rotate(-90f),
+                    imageVector = Icons.Default.ArrowForward,
+                    contentDescription = "",
+                    tint = MaterialTheme.colors.onPrimary
+                )
+            }
         }
     }
 }

@@ -16,10 +16,13 @@ import saityan.misc.copycat.view.screens.common.ButtonOpenIn
 fun LessonCard(
     subject: String,
     teacher: String,
-    timePeriod: String
+    timePeriod: String,
+    isOpenedIn: Boolean = true
 ) {
     Row(
-        modifier = Modifier.padding(bottom = 12.dp)
+        modifier = Modifier
+            .padding(bottom = 12.dp)
+            .padding(end = 6.dp)
     ) {
         Column(
             modifier = Modifier.weight(1.5f)
@@ -39,6 +42,7 @@ fun LessonCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 12.dp, horizontal = 6.dp)
+                    .heightIn(100.dp)
                     .graphicsLayer {
                         shape = RoundedCornerShape(
                             topStart = 32.dp,
@@ -56,9 +60,9 @@ fun LessonCard(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Lesson(subject, teacher)
+                    LessonBody(subject, teacher)
 
-                    ButtonOpenIn()
+                    ButtonOpenIn(isOpenedIn)
                 }
             }
         }
