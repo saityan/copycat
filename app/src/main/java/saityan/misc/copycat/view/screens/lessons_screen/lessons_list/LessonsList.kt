@@ -24,6 +24,13 @@ fun LessonsList() {
             subject = "Physical Education",
             teacher ="Mr Barros",
             timePeriod = "10:00 - 11:35",
-            isOpenedIn = false)
+            isOpenedIn = false
+        ),
+
+        LessonCard(
+            subject = "Physics",
+            teacher ="Mr Livingston",
+            timePeriod = "12:00 - 13:30",
+        ),
     )
 }

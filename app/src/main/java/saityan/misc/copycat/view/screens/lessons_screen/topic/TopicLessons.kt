@@ -27,7 +27,6 @@ fun TopicLessons(
             IconBell()
         }
     }
-    Spacer(Modifier.height(32.dp))
 }
 
 @Preview(showBackground = false)
