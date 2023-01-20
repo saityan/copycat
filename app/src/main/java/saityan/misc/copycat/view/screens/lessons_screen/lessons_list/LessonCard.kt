@@ -9,7 +9,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.R
@@ -32,9 +34,8 @@ fun LessonCard(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                modifier = Modifier
-                    .offset(y = 18.dp),
-                painter = painterResource(R.drawable.lessons_line),
+                modifier = Modifier.offset(y = 18.dp),
+                imageVector = ImageVector.vectorResource(id = R.drawable.lessons_line),
                 contentDescription = "",
             )
         }
