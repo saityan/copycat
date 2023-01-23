@@ -10,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -25,7 +26,6 @@ fun LessonCard(
 ) {
     Row(
         modifier = Modifier
-            .padding(bottom = 12.dp)
             .padding(end = 6.dp)
     ) {
         Column(
@@ -34,9 +34,9 @@ fun LessonCard(
         ) {
             Image(
                 modifier = Modifier
-                    .offset(y = 10.dp),
-                imageVector = ImageVector.vectorResource(id = R.drawable.lessons_line_passive),
-                contentDescription = "",
+                    .offset(y = 9.dp),
+                painter = painterResource(id = R.drawable.lessons_line_short),
+                contentDescription = null,
             )
         }
 
