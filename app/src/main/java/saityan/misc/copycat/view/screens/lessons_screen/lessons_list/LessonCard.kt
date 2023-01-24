@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.view.screens.common.ButtonOpenIn
+import saityan.misc.copycat.view.screens.common.VerticalDivider
 
 @Composable
 fun LessonCard(
@@ -79,19 +80,3 @@ fun LessonCard(
 private fun LessonCardPreview() {
     LessonCard(subject = "History", teacher = "Mrs Thomas", timePeriod = "8:00 - 8:45")
 }
-
-@Composable
-fun VerticalDivider(
-    modifier: Modifier = Modifier,
-    color: Color = MaterialTheme.colors.secondary.copy(alpha = DividerAlpha),
-    thickness: Dp = 2.dp
-) {
-    Box(
-        modifier
-            .heightIn(175.dp, 350.dp)
-            .width(thickness)
-            .background(color = color)
-    )
-}
-
-private const val DividerAlpha = 1f
