@@ -24,7 +24,8 @@ fun LessonsList() {
             subject = "Physical Education",
             teacher ="Mr Barros",
             timePeriod = "10:00 - 11:35",
-            isOpenedIn = false
+            isOpenedIn = false,
+            isPaired = true
         ),
 
         LessonCard(
