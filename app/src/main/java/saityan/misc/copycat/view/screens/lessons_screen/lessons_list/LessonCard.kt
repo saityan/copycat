@@ -12,15 +12,16 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.view.screens.common.ButtonOpenIn
-import saityan.misc.copycat.view.screens.common.VerticalDivider
 
 @Composable
 fun LessonCard(
     subject: String,
     teacher: String,
     timePeriod: String,
+    desc: String? = null,
     isOpenedIn: Boolean = true,
     isPaired: Boolean = false
 ) {
@@ -33,7 +34,7 @@ fun LessonCard(
                 .weight(1.5f),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            VerticalDivider()
+            VerticalDivider(isPaired = isPaired)
         }
 
         Column(
@@ -81,7 +82,16 @@ private fun GetSingularCard(
             },
         color = MaterialTheme.colors.surface,
     ) {
-        CardContent(subject = subject, teacher = teacher, isOpenedIn = isOpenedIn)
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            LessonBody(subject, teacher)
+
+            ButtonOpenIn(isOpenedIn)
+        }
     }
 }
 
@@ -89,7 +99,8 @@ private fun GetSingularCard(
 private fun GetPairedCard(
     subject: String,
     teacher: String,
-    isOpenedIn: Boolean
+    isOpenedIn: Boolean,
+    desc: String? = null
 ) {
     Surface(
         modifier = Modifier
@@ -112,20 +123,26 @@ private fun GetPairedCard(
             ),
         color = Color.Transparent
     ) {
-        CardContent(subject = subject, teacher = teacher, isOpenedIn = isOpenedIn)
+
     }
 }
 
 @Composable
-private fun CardContent(subject: String, teacher: String, isOpenedIn: Boolean) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        LessonBody(subject, teacher)
-
-        ButtonOpenIn(isOpenedIn)
-    }
+private fun VerticalDivider(
+    modifier: Modifier = Modifier,
+    color: Color = MaterialTheme.colors.secondary.copy(alpha = 1f),
+    thickness: Dp = 2.dp,
+    isPaired: Boolean = false
+) {
+    Box(
+        modifier
+            .heightIn(
+                if (isPaired)
+                    275.dp
+                else
+                    175.dp
+            )
+            .width(thickness)
+            .background(color = color)
+    )
 }
