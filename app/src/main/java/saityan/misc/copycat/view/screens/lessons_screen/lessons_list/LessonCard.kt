@@ -15,13 +15,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.view.screens.common.ButtonOpenIn
+import saityan.misc.copycat.view.screens.common.LOREM_IPSUM
 
 @Composable
 fun LessonCard(
     subject: String,
     teacher: String,
     timePeriod: String,
-    desc: String? = null,
+    desc: String = "",
     isOpenedIn: Boolean = true,
     isPaired: Boolean = false
 ) {
@@ -46,7 +47,7 @@ fun LessonCard(
             Spacer(modifier = Modifier.height(6.dp))
 
             if (isPaired) {
-                GetPairedCard(subject = subject, teacher = teacher, isOpenedIn = isOpenedIn)
+                GetPairedCard(subject = subject, teacher = teacher, desc = desc)
             } else {
                 GetSingularCard(subject = subject, teacher = teacher, isOpenedIn = isOpenedIn)
             }
@@ -57,7 +58,21 @@ fun LessonCard(
 @Composable
 @Preview(showBackground = false)
 private fun LessonCardPreview() {
-    LessonCard(subject = "History", teacher = "Mrs Thomas", timePeriod = "8:00 - 8:45")
+    Column {
+        listOf(
+            LessonCard(
+                subject = "History",
+                teacher = "Mrs Thomas",
+                timePeriod = "8:00 - 8:45"
+            ),
+            LessonCard(
+                subject = "Physics",
+                teacher = "Mr Whatever", timePeriod = "13:00 - 13: 45",
+                isPaired = true,
+                desc = LOREM_IPSUM
+            ),
+        )
+    }
 }
 
 @Composable
@@ -99,8 +114,7 @@ private fun GetSingularCard(
 private fun GetPairedCard(
     subject: String,
     teacher: String,
-    isOpenedIn: Boolean,
-    desc: String? = null
+    desc: String = ""
 ) {
     Surface(
         modifier = Modifier
@@ -123,7 +137,34 @@ private fun GetPairedCard(
             ),
         color = Color.Transparent
     ) {
+        Column {
 
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 6.dp)
+                    .padding(top = 24.dp, bottom = 6.dp),
+                verticalAlignment = Alignment.Top
+            ) {
+                LessonBody(
+                    subject = subject,
+                    teacher = teacher,
+                    iconOpacity = 0.2f,
+                    isPairedLesson = true
+                )
+            }
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 12.dp)
+                    .padding(start = 18.dp, end = 6.dp),
+                horizontalArrangement = Arrangement.Start,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                LessonDescription(desc = desc)
+            }
+        }
     }
 }
 

@@ -17,7 +17,10 @@ import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.view.screens.common.getIconBySubject
 
 @Composable
-fun LessonIcon(subject: String) {
+fun LessonIcon(
+    subject: String,
+    opacity: Float = 1f
+) {
     Box(
         modifier = Modifier
             .graphicsLayer {
@@ -31,7 +34,9 @@ fun LessonIcon(subject: String) {
             }
             .height(48.dp)
             .width(48.dp)
-            .background(color = MaterialTheme.colors.onSurface)
+            .background(
+                color = MaterialTheme.colors.onSurface.copy(alpha = opacity)
+            )
     ) {
         Icon(
             modifier = Modifier.padding(12.dp),

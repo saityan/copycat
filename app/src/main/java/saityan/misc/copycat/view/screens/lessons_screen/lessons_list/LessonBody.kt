@@ -11,7 +11,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun LessonBody(subject: String, teacher: String) {
+fun LessonBody(
+    subject: String,
+    teacher: String,
+    isPairedLesson: Boolean = false,
+    iconOpacity: Float = 1f
+) {
     Row(
         horizontalArrangement = Arrangement.Start,
         verticalAlignment = Alignment.CenterVertically
@@ -19,11 +24,11 @@ fun LessonBody(subject: String, teacher: String) {
         Column(
             modifier = Modifier.padding(horizontal = 12.dp)
         ) {
-            LessonIcon(subject = subject)
+            LessonIcon(subject = subject, opacity = iconOpacity)
         }
         Column {
-            LessonName(subject)
-            TeacherName(teacher)
+            LessonName(lessonName = subject)
+            TeacherName(teacher, isPairedLesson = isPairedLesson)
         }
     }
 }

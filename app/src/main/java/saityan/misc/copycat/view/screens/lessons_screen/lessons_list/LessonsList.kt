@@ -2,6 +2,7 @@ package saityan.misc.copycat.view.screens.lessons_screen.lessons_list
 
 import androidx.compose.runtime.Composable
 import coil.annotation.ExperimentalCoilApi
+import saityan.misc.copycat.view.screens.common.PHYS_EDUC_DEMO
 
 @ExperimentalCoilApi
 @Composable
@@ -24,6 +25,7 @@ fun LessonsList() {
             subject = "Physical Education",
             teacher ="Mr Barros",
             timePeriod = "10:00 - 11:35",
+            desc = PHYS_EDUC_DEMO,
             isOpenedIn = false,
             isPaired = true
         ),
