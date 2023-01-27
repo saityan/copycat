@@ -16,13 +16,13 @@ fun HomeworkList() {
             HomeworkCard(
                 "Literature",
                 2, "Read scenes 1.1-1.12 of The Master and Margarita",
-                listOf(1, 2)
+                listOf(2, 1)
             ),
             HomeworkCard(
                 "Physics",
                 5,
                 "Learn Newton's laws of motion",
-                listOf(2, 4)
+                listOf(3, 4)
             ),
         )
     }
