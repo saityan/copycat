@@ -12,7 +12,8 @@ fun LessonDescription(desc: String) {
     Text(
         text = desc,
         style = Typography.subtitle1,
-        color = MaterialTheme.colors.onPrimary.copy(alpha = 0.8f)
+        color = MaterialTheme.colors.onPrimary.copy(alpha = 0.8f),
+        maxLines = 3
     )
 }
 

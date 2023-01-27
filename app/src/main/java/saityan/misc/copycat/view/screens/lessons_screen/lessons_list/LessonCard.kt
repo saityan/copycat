@@ -164,6 +164,17 @@ private fun GetPairedCard(
             ) {
                 LessonDescription(desc = desc)
             }
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 12.dp)
+                    .padding(start = 18.dp, end = 6.dp),
+                horizontalArrangement = Arrangement.Start,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                IconsForPairedLesson(icons = listOf(1, 2, 3))
+            }
         }
     }
 }
