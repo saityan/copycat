@@ -7,5 +7,5 @@ fun getIconBySubject(subject: String): Int = when (subject) {
     "Literature" -> R.drawable.ic_literature
     "Physical Education" -> R.drawable.ic_physical
     "Physics" -> R.drawable.ic_physics
-    else -> 0
+    else -> R.drawable.ic_lesson_default
 }
