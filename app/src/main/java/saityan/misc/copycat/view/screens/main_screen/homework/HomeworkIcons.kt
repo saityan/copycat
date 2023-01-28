@@ -2,15 +2,11 @@ package saityan.misc.copycat.view.screens.main_screen.homework
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
@@ -21,7 +17,9 @@ import saityan.misc.copycat.R
 @Composable
 fun HomeworkIcons(icons: List<Int>) {
     if (icons.isNotEmpty()) {
-        Row {
+        Row(
+            horizontalArrangement = Arrangement.spacedBy((-6).dp)
+        ) {
             icons.forEach {
                 Box(
                     modifier = Modifier
