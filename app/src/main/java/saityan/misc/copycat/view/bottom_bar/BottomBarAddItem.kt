@@ -16,7 +16,16 @@ fun RowScope.AddItem(
 ) {
     BottomNavigationItem(
         label = {
-            Text(text = screen.title)
+            Text(
+                text = screen.title,
+                color = if (destination?.hierarchy?.any {
+                        it.route == screen.route
+                    } == true) {
+                    MaterialTheme.colors.secondary.copy(alpha = ContentAlpha.high)
+                } else {
+                    MaterialTheme.colors.onPrimary.copy(alpha = ContentAlpha.medium)
+                }
+            )
         },
         icon = {
             Icon(
@@ -27,7 +36,8 @@ fun RowScope.AddItem(
         selected = destination?.hierarchy?.any {
             it.route == screen.route
         } == true,
-        unselectedContentColor = LocalContentColor.current.copy(alpha = ContentAlpha.disabled),
+        unselectedContentColor = MaterialTheme.colors.onPrimary.copy(alpha = ContentAlpha.medium),
+        selectedContentColor = MaterialTheme.colors.secondary.copy(alpha = ContentAlpha.high),
         onClick = {
             navController.navigate(screen.route) {
                 popUpTo(navController.graph.findStartDestination().id)
