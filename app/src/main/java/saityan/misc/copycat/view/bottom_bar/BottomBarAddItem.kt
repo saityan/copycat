@@ -18,9 +18,7 @@ fun RowScope.AddItem(
         label = {
             Text(
                 text = screen.title,
-                color = if (destination?.hierarchy?.any {
-                        it.route == screen.route
-                    } == true) {
+                color = if (checkDestination(destination, screen)) {
                     MaterialTheme.colors.secondary.copy(alpha = ContentAlpha.high)
                 } else {
                     MaterialTheme.colors.onPrimary.copy(alpha = ContentAlpha.medium)
@@ -33,9 +31,7 @@ fun RowScope.AddItem(
                 contentDescription = "Navigation"
             )
         },
-        selected = destination?.hierarchy?.any {
-            it.route == screen.route
-        } == true,
+        selected = checkDestination(destination, screen),
         unselectedContentColor = MaterialTheme.colors.onPrimary.copy(alpha = ContentAlpha.medium),
         selectedContentColor = MaterialTheme.colors.secondary.copy(alpha = ContentAlpha.high),
         onClick = {
@@ -46,3 +42,11 @@ fun RowScope.AddItem(
         }
     )
 }
+
+@Composable
+private fun checkDestination(
+    destination: NavDestination?,
+    screen: BottomBarScreenList
+) = destination?.hierarchy?.any {
+    it.route == screen.route
+} == true
