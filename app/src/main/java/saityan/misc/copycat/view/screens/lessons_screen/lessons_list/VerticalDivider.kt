@@ -19,7 +19,7 @@ import saityan.misc.copycat.R
 @Composable
 fun VerticalDivider(
     modifier: Modifier = Modifier,
-    color: Color = MaterialTheme.colors.secondary.copy(alpha = 0.3f),
+    color: Color = MaterialTheme.colors.primaryVariant.copy(alpha = 0.3f),
     thickness: Dp = 1.dp,
     isPaired: Boolean = false,
     isCurrent: Boolean = false
@@ -28,13 +28,15 @@ fun VerticalDivider(
         Image(
             modifier = Modifier.offset(y = 10.dp),
             imageVector = ImageVector.vectorResource(id = R.drawable.utility_dot_large),
-            contentDescription = null
+            contentDescription = null,
+            alpha = 0.8f
         )
     } else {
         Image(
             modifier = Modifier.offset(y = 10.dp),
             imageVector = ImageVector.vectorResource(id = R.drawable.utility_dot_small),
-            contentDescription = null
+            contentDescription = null,
+            alpha = 0.8f
         )
     }
 
