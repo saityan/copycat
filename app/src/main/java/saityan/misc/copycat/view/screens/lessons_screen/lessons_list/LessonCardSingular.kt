@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.view.screens.common.ButtonOpenIn
 
 @Composable
-fun SingularCard(
+fun LessonCardSingular(
     subject: String,
     teacher: String,
     isOpenedIn: Boolean = false
@@ -50,5 +50,5 @@ fun SingularCard(
 @Composable
 @Preview(showBackground = false)
 private fun SingularCardPreview() {
-    SingularCard(subject = "History", teacher = "Mr Barros")
+    LessonCardSingular(subject = "History", teacher = "Mr Barros")
 }

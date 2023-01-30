@@ -15,7 +15,8 @@ fun LessonCard(
     timePeriod: String,
     desc: String = "",
     isOpenedIn: Boolean = true,
-    isPaired: Boolean = false
+    isPaired: Boolean = false,
+    isCurrent: Boolean = false
 ) {
     Row(
         modifier = Modifier
@@ -26,21 +27,27 @@ fun LessonCard(
                 .weight(1.5f),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            VerticalDivider(isPaired = isPaired)
+            VerticalDivider(
+                isPaired = isPaired,
+                isCurrent = isCurrent
+            )
         }
 
         Column(
             modifier = Modifier.weight(8.5f)
         ) {
-            Row {
+            Row(
+                modifier = Modifier
+                    .offset(y = if (isCurrent) 10.dp else 0.dp)
+            ) {
                 LessonTimePeriod(timePeriod = timePeriod)
             }
             Spacer(modifier = Modifier.height(6.dp))
 
             if (isPaired) {
-                PairedCard(subject = subject, teacher = teacher, desc = desc)
+                LessonCardPaired(subject = subject, teacher = teacher, desc = desc)
             } else {
-                SingularCard(subject = subject, teacher = teacher, isOpenedIn = isOpenedIn)
+                LessonCardSingular(subject = subject, teacher = teacher, isOpenedIn = isOpenedIn)
             }
         }
     }

@@ -14,7 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun PairedCard(
+fun LessonCardPaired(
     subject: String,
     teacher: String,
     desc: String = ""
@@ -85,5 +85,5 @@ fun PairedCard(
 @Composable
 @Preview(showBackground = false)
 private fun PairedCardPreview() {
-    PairedCard(subject = "Physical Education", teacher = "")
+    LessonCardPaired(subject = "Physical Education", teacher = "")
 }

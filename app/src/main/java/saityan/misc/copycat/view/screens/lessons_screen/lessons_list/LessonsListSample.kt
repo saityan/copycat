@@ -6,19 +6,20 @@ import saityan.misc.copycat.view.screens.common.PHYS_EDUC_DEMO
 
 @ExperimentalCoilApi
 @Composable
-fun LessonsList() {
+fun LessonsListSample() {
     listOf(
         LessonCard(
             subject = "History",
             teacher = "Mrs Thomas",
-            timePeriod = "8:00 - 8:45"
+            timePeriod = "8:00 - 8:45",
+            isCurrent = true,
         ),
 
         LessonCard(
             subject = "Literature",
             teacher = "Mrs Barros",
             timePeriod = "9:00 - 9:45",
-            isOpenedIn = false
+            isOpenedIn = false,
         ),
 
         LessonCard(
@@ -27,7 +28,7 @@ fun LessonsList() {
             timePeriod = "10:00 - 11:35",
             desc = PHYS_EDUC_DEMO,
             isOpenedIn = false,
-            isPaired = true
+            isPaired = true,
         ),
 
         LessonCard(

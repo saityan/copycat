@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
-import saityan.misc.copycat.view.screens.lessons_screen.lessons_list.LessonsList
+import saityan.misc.copycat.view.screens.lessons_screen.lessons_list.LessonsListSample
 import saityan.misc.copycat.view.screens.lessons_screen.topic.TopicLessons
 
 @OptIn(ExperimentalCoilApi::class)
@@ -34,7 +34,7 @@ fun LessonsScreen() {
                     .padding(top = 12.dp)
                     .verticalScroll(rememberScrollState())
             ) {
-                LessonsList()
+                LessonsListSample()
             }
         }
     }

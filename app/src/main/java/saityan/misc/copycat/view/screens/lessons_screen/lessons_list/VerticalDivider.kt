@@ -2,7 +2,10 @@ package saityan.misc.copycat.view.screens.lessons_screen.lessons_list
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,16 +21,25 @@ fun VerticalDivider(
     modifier: Modifier = Modifier,
     color: Color = MaterialTheme.colors.secondary.copy(alpha = 0.3f),
     thickness: Dp = 1.dp,
-    isPaired: Boolean = false
+    isPaired: Boolean = false,
+    isCurrent: Boolean = false
 ) {
-    Image(
-        modifier = Modifier.offset(y = 10.dp),
-        imageVector = ImageVector.vectorResource(id = R.drawable.utility_dot),
-        contentDescription = null
-    )
+    if (isCurrent) {
+        Image(
+            modifier = Modifier.offset(y = 10.dp),
+            imageVector = ImageVector.vectorResource(id = R.drawable.utility_dot_large),
+            contentDescription = null
+        )
+    } else {
+        Image(
+            modifier = Modifier.offset(y = 10.dp),
+            imageVector = ImageVector.vectorResource(id = R.drawable.utility_dot_small),
+            contentDescription = null
+        )
+    }
 
     Box(
-        modifier
+        modifier = modifier
             .offset(y = 10.dp)
             .heightIn(
                 if (isPaired)

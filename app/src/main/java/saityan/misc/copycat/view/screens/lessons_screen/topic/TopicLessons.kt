@@ -11,7 +11,8 @@ import androidx.compose.ui.unit.dp
 fun TopicLessons(
     day: String
 ) {
-    Row (
+    Row(
+        modifier = Modifier.padding(end = 6.dp),
         verticalAlignment = Alignment.Top,
     ) {
         Column(Modifier.weight(7f)) {
