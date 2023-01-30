@@ -25,7 +25,7 @@ fun IconList() {
             Icon(
                 imageVector = Icons.Default.List,
                 contentDescription = "Settings",
-                tint = MaterialTheme.colors.onPrimary
+                tint = MaterialTheme.colors.secondary
             )
         }
     }
