@@ -14,7 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun TimerCard() {
+fun TimerCard(timer: String = "00:00:00") {
     Surface(
         modifier = Modifier
             .fillMaxWidth()
@@ -35,7 +35,7 @@ fun TimerCard() {
             ),
         color = Color.Transparent
     ) {
-        Timer()
+        Timer(timer)
     }
 }
 

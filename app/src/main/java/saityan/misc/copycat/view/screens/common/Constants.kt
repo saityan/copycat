@@ -6,3 +6,5 @@ const val PHYS_EDUC_DEMO = "Intensive preparation for The Junior World Champions
 const val LOREM_IPSUM = "Lorem ipsum dolor sit amet," +
         " consectetur adipiscing elit, sed do eiusmod tempor incididunt" +
         " ut labore et dolore magna aliqua."
+
+const val countdown = 800000000L

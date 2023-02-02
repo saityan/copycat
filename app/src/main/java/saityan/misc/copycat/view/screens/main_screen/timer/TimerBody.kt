@@ -11,7 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun TimerBody() {
+fun TimerBody(timer: String) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center
@@ -20,8 +20,8 @@ fun TimerBody() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Row {
-                NumberBox(number = 1)
-                NumberBox(number = 0)
+                NumberBox(number = timer[0].digitToInt())
+                NumberBox(number = timer[1].digitToInt())
             }
             Spacer(Modifier.height(8.dp))
 
@@ -38,8 +38,8 @@ fun TimerBody() {
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Row {
-                NumberBox(number = 0)
-                NumberBox(number = 0)
+                NumberBox(number = timer[3].digitToInt())
+                NumberBox(number = timer[4].digitToInt())
             }
             Spacer(Modifier.height(8.dp))
 
@@ -56,8 +56,8 @@ fun TimerBody() {
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Row {
-                NumberBox(number = 0)
-                NumberBox(number = 0)
+                NumberBox(number = timer[6].digitToInt())
+                NumberBox(number = timer[7].digitToInt())
             }
             Spacer(Modifier.height(8.dp))
 
@@ -75,5 +75,5 @@ fun TimerBody() {
 @Preview(showBackground = false)
 @Composable
 private fun TimerBodyPreview() {
-    TimerBody()
+    TimerBody("10:00:00")
 }

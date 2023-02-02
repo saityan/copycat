@@ -8,18 +8,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun Timer() {
+fun Timer(timer: String) {
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         TimerHeader()
-        TimerBody()
+        TimerBody(timer)
     }
 }
 
 @Preview(showBackground = false)
 @Composable
 private fun TimerPreview() {
-    Timer()
+    Timer("10:00:00")
 }
