@@ -20,3 +20,7 @@ Target SDK is 33.
 
 ## Timer
 Though it might not seem like that, the countdown timer is actually working. It always starts from the same value, that can be adjusted by changing "countdown" constant.
+
+##Testing
+The app was tested in Android Studio on the following virtual devices: Pixel 5 API 30, Pixel XL API 31, Nexus 6 API 33, Nexus 9 API 26.
+There was no real device testing.
