@@ -3,7 +3,7 @@ This repository contains the intent to create the Android app with the following
 
 ![interface_screenshot](https://user-images.githubusercontent.com/20212022/216633559-0e028ece-7aca-4991-9cc3-f7d03b6720f6.jpg)
 
-It was relayed to me as a potentially interesting task to solidfy certain skills. No functionality aside from presenting the interface was implied.
+It was relayed to me as a potentially interesting task to solidify certain skills. No functionality aside from presenting the interface was implied.
 No icons or other assets were given, as well as any numeric specifications.
 
 ## Technology and structure
