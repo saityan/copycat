@@ -20,7 +20,9 @@ import saityan.misc.copycat.view.screens.lessons_screen.topic.TopicLessons
 @Composable
 fun LessonsScreen() {
     Surface(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(top = 60.dp),
         color = MaterialTheme.colors.background,
     ) {
         Column(

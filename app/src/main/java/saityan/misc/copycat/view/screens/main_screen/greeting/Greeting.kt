@@ -39,7 +39,7 @@ fun Greeting(
             ProfileIcon()
         }
     }
-    Spacer(Modifier.height(32.dp))
+    Spacer(Modifier.height(16.dp))
 }
 
 @Preview(showBackground = false)

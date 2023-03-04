@@ -37,7 +37,9 @@ fun MainScreen() {
     count.start()
 
     Surface(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(top = 60.dp),
         color = MaterialTheme.colors.background,
     ) {
         Column(
