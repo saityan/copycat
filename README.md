@@ -15,7 +15,7 @@ The app uses vector icons as external assets, which were drawn by a 3rd party. A
 If you happen to be the author of any of the assets and want attribution or restrict non-commercial use, please contact me.
 
 ## SDK restrictions
-Minimum SDK is 26.
+Minimum SDK is 23.
 Target SDK is 33.
 
 ## Testing
