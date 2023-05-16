@@ -15,12 +15,8 @@ The app uses vector icons as external assets, which were drawn by a 3rd party. A
 If you happen to be the author of any of the assets and want attribution or restrict non-commercial use, please contact me.
 
 ## SDK restrictions
-Minimum SDK is 26.
+Minimum SDK is 23.
 Target SDK is 33.
 
-## Timer
-Though it might not seem like that, the countdown timer is actually working. It always starts from the same value, that can be adjusted by changing "countdown" constant.
-
 ## Testing
-The app was tested in Android Studio on the following virtual devices: Pixel 5 API 30, Pixel XL API 31, Nexus 6 API 33, Nexus 9 API 26.
-There was no real device testing.
+Tested on Android 6.0 device.
