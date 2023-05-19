@@ -22,7 +22,6 @@ fun LessonCardSingular(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 12.dp, horizontal = 6.dp)
-            .heightIn(100.dp)
             .graphicsLayer {
                 shape = RoundedCornerShape(
                     topStart = 32.dp,
@@ -31,7 +30,13 @@ fun LessonCardSingular(
                     bottomEnd = 32.dp
                 )
                 clip = true
-            },
+            }
+            .then(
+                if (!isOpenedIn)
+                    Modifier.heightIn(115.dp)
+                else
+                    Modifier.heightIn()
+            ),
         color = MaterialTheme.colors.surface,
     ) {
         Row(
