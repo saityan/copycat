@@ -20,3 +20,6 @@ Target SDK is 33.
 
 ## Testing
 Tested on Android 6.0 device.
+
+## Timer
+Timer is working and uses CountDownTimer and SimpleDateFormat classes as its base.
