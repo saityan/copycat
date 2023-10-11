@@ -33,9 +33,9 @@ fun LessonCardSingular(
             }
             .then(
                 if (!isOpenedIn)
-                    Modifier.heightIn(115.dp)
+                    Modifier.heightIn(min = 115.dp)
                 else
-                    Modifier.heightIn()
+                    Modifier.heightIn(min = 0.dp)
             ),
         color = MaterialTheme.colors.surface,
     ) {
@@ -45,7 +45,7 @@ fun LessonCardSingular(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            LessonBody(subject, teacher)
+            LessonBody(subject = subject, teacher = teacher)
 
             ButtonOpenIn(isOpenedIn)
         }
