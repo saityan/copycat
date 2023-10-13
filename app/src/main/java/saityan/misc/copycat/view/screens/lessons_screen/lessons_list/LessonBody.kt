@@ -15,7 +15,8 @@ fun LessonBody(
     subject: String,
     teacher: String,
     isPairedLesson: Boolean = false,
-    iconOpacity: Float = 1f
+    iconOpacity: Float = 1f,
+    isOpenedIn: Boolean = false
 ) {
     Row(
         horizontalArrangement = Arrangement.Start,
@@ -24,11 +25,11 @@ fun LessonBody(
         Column(
             modifier = Modifier.padding(horizontal = 12.dp)
         ) {
-            LessonIcon(subject = subject, opacity = iconOpacity)
+            SubjectIcon(subject = subject, opacity = iconOpacity)
         }
         Column {
             LessonName(lessonName = subject)
-            TeacherName(teacher, isPairedLesson = isPairedLesson)
+            TeacherName(teacher, isPairedLesson = isPairedLesson, isOpenedIn)
         }
     }
 }

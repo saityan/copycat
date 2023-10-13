@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import saityan.misc.copycat.view.screens.common.getIconBySubject
 
 @Composable
-fun LessonIcon(
+fun SubjectIcon(
     subject: String,
     opacity: Float = 1f
 ) {
@@ -50,5 +50,5 @@ fun LessonIcon(
 @Preview(showBackground = false)
 @Composable
 private fun LessonIconPreview() {
-    LessonIcon(subject = "Literature")
+    SubjectIcon(subject = "Literature")
 }

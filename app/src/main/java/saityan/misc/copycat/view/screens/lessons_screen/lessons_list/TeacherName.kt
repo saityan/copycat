@@ -11,12 +11,18 @@ import saityan.misc.copycat.ui.theme.Typography
 @Composable
 fun TeacherName(
     teacherName: String,
-    isPairedLesson: Boolean = false
+    isPairedLesson: Boolean = false,
+    isOpenedIn: Boolean = false
 ) {
     Text(
-        modifier = Modifier.padding(top = 6.dp),
-        text = "Teacher: $teacherName",
-        style = Typography.subtitle1,
+        modifier = Modifier
+            .padding(top = 6.dp),
+        text =
+            if(isOpenedIn)
+                "Teacher:\n$teacherName"
+            else
+                "Teacher: $teacherName",
+        style = Typography.subtitle2,
         color =
             if (isPairedLesson) {
                 MaterialTheme.colors.onPrimary.copy(alpha = 0.8f)

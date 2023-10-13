@@ -22,6 +22,7 @@ fun LessonCardSingular(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 12.dp, horizontal = 6.dp)
+            .heightIn(min = 110.dp)
             .graphicsLayer {
                 shape = RoundedCornerShape(
                     topStart = 32.dp,
@@ -30,13 +31,7 @@ fun LessonCardSingular(
                     bottomEnd = 32.dp
                 )
                 clip = true
-            }
-            .then(
-                if (!isOpenedIn)
-                    Modifier.heightIn(min = 115.dp)
-                else
-                    Modifier.heightIn(min = 0.dp)
-            ),
+            },
         color = MaterialTheme.colors.surface,
     ) {
         Row(
@@ -45,7 +40,7 @@ fun LessonCardSingular(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            LessonBody(subject = subject, teacher = teacher)
+            LessonBody(subject = subject, teacher = teacher, isOpenedIn = isOpenedIn)
 
             ButtonOpenIn(isOpenedIn)
         }
